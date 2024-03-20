@@ -9,13 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "big": "url('/gradient-bg.svg')",
+        "small": "url('/grad.svg')",
       },
       fontFamily: {
         orbitron: ["var(--font-orbitron)"],
         space: ["var(--font-space_grotesk)"],
+      },
+    },
+    animation: {
+      'infinite-scroll': "infinite-scroll 80s linear infinite",
+    },
+    keyframes: {
+      'infinite-scroll': {
+        from: { transform: 'translateX(0)' },
+        to: { transform: 'translateX(-100%)' },
       },
     },
   },

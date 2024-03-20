@@ -17,6 +17,18 @@ const orbitron = localFont({
       path: '../../public/fonts/Orbitron-Black.ttf',
       weight: '900',
     },
+    {
+      path: '../../public/fonts/Orbitron-Medium.ttf',
+      weight: '400',
+    },
+    {
+      path: '../../public/fonts/Orbitron-SemiBold.ttf',
+      weight: '600',
+    },
+    {
+      path: '../../public/fonts/Orbitron-Bold.ttf',
+      weight: '700',
+    },
   ],
   variable: '--font-orbitron',
 });
