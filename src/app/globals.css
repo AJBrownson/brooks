@@ -28,6 +28,10 @@ body {
     rgb(var(--background-start-rgb)); */
 }
 
+.group:hover {
+  border-image: linear-gradient(90deg, #0099FF, #00BBFF, #00D5E9, #00E8B9, #96F589, #F9F871) 1;
+  border-image-slice: 1;
+}
 
 /* @layer utilities {
   .text-balance {

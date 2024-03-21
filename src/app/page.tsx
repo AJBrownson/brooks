@@ -1,34 +1,44 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 import Hero from "../../public/hero.svg";
-import About from "../../public/about-hero.png"
-import LockWhite from "../../public/lock-white.svg"
-// import LockBlack from "../../public/lock-black.svg"
+import About from "../../public/about-hero.png";
+import LockWhite from "../../public/lock-white.svg";
+import LockBlack from "../../public/lock-black.svg";
 import Circle from "../../public/circle.png";
 import Gradient from "../../public/gradient-bg.svg";
 import { InfiniteSlider } from "@/components/Carousel";
 import Telegram from "../../public/telegram.png";
+import TelegramDark from "../../public/TelegramDark.png";
+import TelegramLight from "../../public/TelegramLight.png";
 import X from "../../public/X.png";
+import XDark from "../../public/XDark.png";
+import XLight from "../../public/XLight.png";
 import Discord from "../../public/Discord.png";
+import DiscordDark from "../../public/DiscordDark.png";
+import DiscordLight from "../../public/DiscordLight.png";
 import VectorUp from "../../public/Vector 56.svg";
 import VectorDown from "../../public/vector-down.png";
-import "./custom.css"
-
+import "./custom.css";
 
 const strokeStyle = {
-  textShadow: "-1px -1px 0 #F5BF2D, 1px -1px 0 #F5BF2D, -1px 1px 0 #F5BF2D, 1px 1px 0 #F5BF2D"
+  textShadow:
+    "-1px -1px 0 #F5BF2D, 1px -1px 0 #F5BF2D, -1px 1px 0 #F5BF2D, 1px 1px 0 #F5BF2D",
 };
-
-
 
 export default function Home() {
   return (
     <main className="font-space relative">
       {/* Hero section */}
-      <Image src={Hero} alt="" className="w-full object-cover" />
-      <section className="z-50 absolute top-56 text-center px-8 lg:px-0" id="home">
-        <h1 className="text-center text-[90px] lg:text-[164px] font-orbitron font-extrabold" style={strokeStyle}>
+      <Image src={Hero} alt="" className="w-full object-cover" id="home" />
+      <section
+        className="z-50 absolute top-56 text-center px-8 lg:px-0"
+        
+      >
+        <h1
+          className="text-center text-[90px] lg:text-[164px] font-orbitron font-extrabold"
+          style={strokeStyle}
+        >
           <span className="text-[#00D5E9]">R</span>oo
           <span className="text-[#00D5E9]">ks</span>
         </h1>
@@ -37,8 +47,8 @@ export default function Home() {
           had their moment, now it's Rook's time to shine.
         </p>
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-3">
-          <button className="mt-4 lg:mt-8 px-3 lg:px-12 py-3 border border-white text-white hover:border-white relative group inline-flex items-center">
-          <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
+          <button className="mt-4 lg:mt-8 px-3 lg:px-12 py-3 border border-white text-white hover:border-white relative group hover:border-gradient inline-flex items-center">
+            <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
               Mint Rooks <Image src={LockWhite} alt="" className="ml-2" />
             </span>
 
@@ -56,7 +66,6 @@ export default function Home() {
               Coming Soon
             </span>
           </button>
-
         </div>
       </section>
 
@@ -106,20 +115,16 @@ export default function Home() {
       </section> */}
 
       <section className="mt-28 lg:mt-96 px-8 lg:px-20 py-20 gap-10" id="about">
-      <Image src={VectorUp} alt="" />
-      <div className="flex">
-      <div className="">
-            <Image
-              src={About}
-              alt=""
-              className=""
-            />
+        <Image src={VectorUp} alt="" />
+        <div className="flex">
+          <div className="">
+            <Image src={About} alt="" className="" />
           </div>
 
           <div className="flex flex-col w-[50%]">
-          <h1 className="font-orbitron font-bold lg:mb-5 leading-snug text-3xl">
-            ABOUT ROOKS
-          </h1>
+            <h1 className="font-orbitron font-bold lg:mb-5 leading-snug text-3xl">
+              ABOUT ROOKS
+            </h1>
             <p className="mb-4 text-lg">
               Rooks Coin, the ultimate meme vibe! Just like rooks rock the
               chessboard, we're here to rule the meme world! Our coin is all
@@ -135,7 +140,7 @@ export default function Home() {
               one transaction at a time!
             </p>
           </div>
-          </div>
+        </div>
       </section>
 
       {/* Story section */}
@@ -162,7 +167,7 @@ export default function Home() {
 
       {/* Tokenomics section */}
       {/* lg:justify-between justify-center rounded-sm  xl:max-w-lg lg:text-left */}
-      <section className="px-8 lg:px-20 py-24">
+      <section className="px-8 lg:px-20 py-24" id="tokenomics">
         <div className="container flex flex-col mx-auto sm:py-12 lg:py-24 lg:flex-row justify-between">
           <div className="flex flex-col justify-center lg:p-4 text-center lg:max-w-xl">
             <h1 className="text-center leading-snug text-4xl lg:text-5xl font-orbitron">
@@ -220,27 +225,96 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Mobile navigation menu widgets */}
-      <section className="fixed flex flex-col gap-3 bottom-56 right-0">
+      <section className="z-50 fixed flex flex-col gap-3 bottom-72 right-0">
         <Link href="#home">
-        <div className="p-3 pl-5 pr-20 bg-white text-black text-left">
-          Home
+        <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group hover:border-gradient items-center">
+            <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
+              Home
+            </span>
+
+            <span className="transition-opacity opacity-0 group-hover:opacity-100">
+              Home
+            </span>
         </div>
         </Link>
         <Link href="#about">
-        <div className="p-3 pl-5 pr-20 bg-white text-black text-left">
-          About
+        <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+            <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
+              About
+            </span>
+
+            <span className="transition-opacity opacity-0 group-hover:opacity-100">
+              About
+            </span>
         </div>
         </Link>
-        <div className="p-3 pl-5 pr-20 bg-white text-black text-left">
-          Twitter
+        <Link href="#tokenomics">
+        <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+            <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
+              Tokenomics
+            </span>
+
+            <span className="transition-opacity opacity-0 group-hover:opacity-100">
+              Tokenomics
+            </span>
         </div>
-        <div className="p-3 pl-5 pr-20 bg-white text-black text-left">
-          Discord
+        </Link>
+        <Link href="#">
+        <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+            <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
+              Mint Rooks <Image src={LockBlack} alt="" className="ml-2" />
+            </span>
+
+            <span className="transition-opacity opacity-0 group-hover:opacity-100">
+              Coming Soon
+            </span>
         </div>
-        <div className="p-3 pl-5 pr-20 bg-white text-black text-left">
-          Telegram
+        </Link>
+
+        <div className="flex justify-between gap-3">
+          <Link href="discord.com">
+          <div className="relative group w-12 h-12 cursor-pointer">
+            <Image
+              src={DiscordLight}
+              alt=""
+              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+            />
+            <Image
+              src={DiscordDark}
+              alt=""
+              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          </Link>
+          <Link href="telegram.com">
+          <div className="relative group w-12 h-12 cursor-pointer">
+            <Image
+              src={TelegramLight}
+              alt=""
+              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+            />
+            <Image
+              src={TelegramDark}
+              alt=""
+              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          </Link>
+          <Link href="x.com">
+          <div className="relative group w-12 h-12 cursor-pointer">
+            <Image
+              src={XLight}
+              alt=""
+              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+            />
+            <Image
+              src={XDark}
+              alt=""
+              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          </Link>
         </div>
       </section>
     </main>
