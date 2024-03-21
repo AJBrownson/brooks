@@ -12,6 +12,15 @@ const config: Config = {
         "big": "url('/gradient-bg.svg')",
         "small": "url('/grad.svg')",
       },
+      gradientColorStops: theme => ({
+        'custom-gradient': {
+          '0': '#0099FF',
+          '25': '#00BBFF',
+          '50': '#00D5E9',
+          '75': '#00E8B9',
+          '100': '#96F589',
+        },
+      }),
       fontFamily: {
         orbitron: ["var(--font-orbitron)"],
         space: ["var(--font-space_grotesk)"],

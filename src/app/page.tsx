@@ -1,38 +1,62 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import Link from "next/link"
-import Hero from "../../public/hero.jpeg";
+import Hero from "../../public/hero.svg";
+import About from "../../public/about-hero.png"
+import LockWhite from "../../public/lock-white.svg"
+// import LockBlack from "../../public/lock-black.svg"
 import Circle from "../../public/circle.png";
 import Gradient from "../../public/gradient-bg.svg";
 import { InfiniteSlider } from "@/components/Carousel";
 import Telegram from "../../public/telegram.png";
 import X from "../../public/X.png";
 import Discord from "../../public/Discord.png";
-import VectorUp from "../../public/vector-up.png";
+import VectorUp from "../../public/Vector 56.svg";
 import VectorDown from "../../public/vector-down.png";
+import "./custom.css"
+
+
+const strokeStyle = {
+  textShadow: "-1px -1px 0 #F5BF2D, 1px -1px 0 #F5BF2D, -1px 1px 0 #F5BF2D, 1px 1px 0 #F5BF2D"
+};
+
 
 
 export default function Home() {
   return (
     <main className="font-space relative">
       {/* Hero section */}
-      <section className="text-center px-8 lg:px-0" id="home">
-        <Image src={Hero} alt="" className="w-full h-72 object-cover" />
-        <h1 className="text-center text-[90px] lg:text-[128px] font-orbitron font-extrabold">
+      <Image src={Hero} alt="" className="w-full object-cover" />
+      <section className="z-50 absolute top-56 text-center px-8 lg:px-0" id="home">
+        <h1 className="text-center text-[90px] lg:text-[164px] font-orbitron font-extrabold" style={strokeStyle}>
           <span className="text-[#00D5E9]">R</span>oo
           <span className="text-[#00D5E9]">ks</span>
         </h1>
-        <p className="text-lg lg:px-72">
+        <p className="text-lg lg:px-72 font-orbitron">
           The most shareable meme coin out there. While the dogs and frogs have
           had their moment, now it's Rook's time to shine.
         </p>
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-3">
-          <button className="mt-4 lg:mt-8 px-3 lg:px-10 py-3 border border-white text-white">
-            Mint Rooks
+          <button className="mt-4 lg:mt-8 px-3 lg:px-12 py-3 border border-white text-white hover:border-white relative group inline-flex items-center">
+          <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
+              Mint Rooks <Image src={LockWhite} alt="" className="ml-2" />
+            </span>
+
+            <span className="transition-opacity opacity-0 group-hover:opacity-100">
+              Coming Soon
+            </span>
           </button>
-          <button className="mt-4 lg:mt-8 px-3 lg:px-10 py-3 bg-[#0099FF]">
-            Presale Coming Soon
+
+          <button className="font-light mt-4 lg:mt-8 px-3 lg:px-12 py-3 bg-[#0099FF] hover:bg-transparent border border-transparent hover:border-white relative group inline-flex items-center">
+            <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
+              Presale <Image src={LockWhite} alt="" className="ml-2" />
+            </span>
+
+            <span className="transition-opacity opacity-0 group-hover:opacity-100">
+              Coming Soon
+            </span>
           </button>
+
         </div>
       </section>
 
@@ -41,27 +65,29 @@ export default function Home() {
         <Image
           src={Gradient}
           alt="A gradient picture"
-          className="absolute lg:top-[38rem]"
+          className="h-[21.5rem] absolute top-[12rem]"
         />
       </section>
 
       {/* About section */}
-      <section className="mt-28 lg:mt-48 px-8 lg:px-60" id="about">
-        <div className="container flex flex-col justify-center mx-auto sm:py-12 lg:py-24 lg:justify-between">
-          <h1 className="text-center font-orbitron font-bold lg:mb-10 leading-snug text-4xl">
-            ABOUT ROOKS
-          </h1>
+      {/* h-72 sm:h-80 lg:h-96    h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128*/}
+      {/* <section className="mt-28 lg:mt-96 px-8 lg:px-40" id="about">
 
-          <div className="flex items-center justify-center h-72 sm:h-80 lg:h-96">
+      container flex justify-center mx-auto sm:py-12 lg:py-24 lg:justify-between
+        <div className="flex justify-between items-center">
+          <div className="">
             <Image
-              src={Hero}
+              src={About}
               alt=""
-              className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+              className=""
             />
           </div>
 
-          <div className="flex flex-col justify-center lg:p-6 text-center">
-            <p className="mb-2 text-lg">
+          <div className="flex flex-col w-[50%]">
+          <h1 className="font-orbitron font-bold lg:mb-10 leading-snug text-4xl">
+            ABOUT ROOKS
+          </h1>
+            <p className="mb-2 text-base">
               Rooks Coin, the ultimate meme vibe! Just like rooks rock the
               chessboard, we're here to rule the meme world! Our coin is all
               about moving freely, spreading laughs in every direction, no
@@ -71,12 +97,45 @@ export default function Home() {
               unstoppable in spreading the joy of memes!
             </p>
 
-            <p className="font-bold text-xl">
+            <p className="font-medium text-lg">
               Together, we'll make the digital world a more meme-friendly place,
               one transaction at a time!
             </p>
           </div>
         </div>
+      </section> */}
+
+      <section className="mt-28 lg:mt-96 px-8 lg:px-20 py-20 gap-10" id="about">
+      <Image src={VectorUp} alt="" />
+      <div className="flex">
+      <div className="">
+            <Image
+              src={About}
+              alt=""
+              className=""
+            />
+          </div>
+
+          <div className="flex flex-col w-[50%]">
+          <h1 className="font-orbitron font-bold lg:mb-5 leading-snug text-3xl">
+            ABOUT ROOKS
+          </h1>
+            <p className="mb-4 text-lg">
+              Rooks Coin, the ultimate meme vibe! Just like rooks rock the
+              chessboard, we're here to rule the meme world! Our coin is all
+              about moving freely, spreading laughs in every direction, no
+              blocks allowed. We own the meme space, one viral trend or
+              hilarious post at a time, making sure the fun never ends. Rooks
+              Coin is the backbone of meme culture, and with us, you'll be
+              unstoppable in spreading the joy of memes!
+            </p>
+
+            <p className="font-medium text-xl">
+              Together, we'll make the digital world a more meme-friendly place,
+              one transaction at a time!
+            </p>
+          </div>
+          </div>
       </section>
 
       {/* Story section */}

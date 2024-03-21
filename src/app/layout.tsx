@@ -39,6 +39,10 @@ const space_grotesk = localFont({
       path: '../../public/fonts/SpaceGrotesk-Medium.ttf',
       weight: '500',
     },
+    {
+      path: '../../public/fonts/SpaceGrotesk-Regular.ttf',
+      weight: '400',
+    },
   ],
   variable: '--font-space_grotesk',
 });
