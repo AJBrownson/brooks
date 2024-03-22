@@ -1,15 +1,7 @@
 import type { Metadata } from "next";
-// import { Orbitron, Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local"
 import "./globals.css";
 
-
-// const orbitron = Orbitron({ 
-//   subsets: ["latin"],
-//   variable: "--font-orbitron",
-//   display: "swap",
-//   adjustFontFallback: false,
-// });
 
 const orbitron = localFont({
   src: [

@@ -19,6 +19,7 @@ import DiscordDark from "../../public/DiscordDark.png";
 import DiscordLight from "../../public/DiscordLight.png";
 import VectorUp from "../../public/Vector 56.svg";
 import VectorDown from "../../public/vector-down.png";
+import Gaming from "../../public/gaming.png";
 import "./custom.css";
 
 const strokeStyle = {
@@ -31,10 +32,7 @@ export default function Home() {
     <main className="font-space relative">
       {/* Hero section */}
       <Image src={Hero} alt="" className="w-full object-cover" id="home" />
-      <section
-        className="z-50 absolute top-56 text-center px-8 lg:px-0"
-        
-      >
+      <section className="z-50 absolute top-56 text-center px-8 lg:px-0">
         <h1
           className="text-center text-[90px] lg:text-[164px] font-orbitron font-extrabold"
           style={strokeStyle}
@@ -114,9 +112,12 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="mt-28 lg:mt-96 px-8 lg:px-20 py-20 gap-10" id="about">
-        <Image src={VectorUp} alt="" />
-        <div className="flex">
+      <section
+        className="mt-28 lg:mt-96 px-8 lg:px-20 py-20 pb-36 gap-10"
+        id="about"
+      >
+        <Image src={VectorUp} alt="" className="mb-10" />
+        <div className="flex items-center">
           <div className="">
             <Image src={About} alt="" className="" />
           </div>
@@ -141,6 +142,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <Image src={VectorDown} alt="" className="mt-10" />
       </section>
 
       {/* Story section */}
@@ -163,6 +165,22 @@ export default function Home() {
       {/* Carousel section */}
       <section>
         <InfiniteSlider />
+      </section>
+
+      {/* Gaming section */}
+      <section className="mt-36 lg:px-20">
+        <div className="py-10 px-8 flex items-center gap-60 bg-custom-gradient">
+          <div className="flex flex-col">
+            <h1 className="font-orbitron font-bold text-4xl leading-snug mb-3">
+              Building Rooks First Gaming System
+            </h1>
+            <p className="mb-4">Join us to be part of the movement.</p>
+            <button className="bg-black text-white px-3 py-3 w-60">
+              In Development
+            </button>
+          </div>
+          <Image src={Gaming} alt="" />
+        </div>
       </section>
 
       {/* Tokenomics section */}
@@ -228,7 +246,7 @@ export default function Home() {
       {/* Mobile navigation menu widgets */}
       <section className="z-50 fixed flex flex-col gap-3 bottom-72 right-0">
         <Link href="#home">
-        <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group hover:border-gradient items-center">
+          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group hover:border-gradient items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Home
             </span>
@@ -236,10 +254,10 @@ export default function Home() {
             <span className="transition-opacity opacity-0 group-hover:opacity-100">
               Home
             </span>
-        </div>
+          </div>
         </Link>
         <Link href="#about">
-        <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               About
             </span>
@@ -247,10 +265,10 @@ export default function Home() {
             <span className="transition-opacity opacity-0 group-hover:opacity-100">
               About
             </span>
-        </div>
+          </div>
         </Link>
         <Link href="#tokenomics">
-        <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Tokenomics
             </span>
@@ -258,10 +276,10 @@ export default function Home() {
             <span className="transition-opacity opacity-0 group-hover:opacity-100">
               Tokenomics
             </span>
-        </div>
+          </div>
         </Link>
         <Link href="#">
-        <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Mint Rooks <Image src={LockBlack} alt="" className="ml-2" />
             </span>
@@ -269,51 +287,51 @@ export default function Home() {
             <span className="transition-opacity opacity-0 group-hover:opacity-100">
               Coming Soon
             </span>
-        </div>
+          </div>
         </Link>
 
         <div className="flex justify-between gap-3">
           <Link href="discord.com">
-          <div className="relative group w-12 h-12 cursor-pointer">
-            <Image
-              src={DiscordLight}
-              alt=""
-              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
-            />
-            <Image
-              src={DiscordDark}
-              alt=""
-              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-            />
-          </div>
+            <div className="relative group w-12 h-12 group">
+              <Image
+                src={DiscordLight}
+                alt=""
+                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+              />
+              <Image
+                src={DiscordDark}
+                alt=""
+                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+              />
+            </div>
           </Link>
           <Link href="telegram.com">
-          <div className="relative group w-12 h-12 cursor-pointer">
-            <Image
-              src={TelegramLight}
-              alt=""
-              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
-            />
-            <Image
-              src={TelegramDark}
-              alt=""
-              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-            />
-          </div>
+            <div className="relative group w-12 h-12 group">
+              <Image
+                src={TelegramLight}
+                alt=""
+                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+              />
+              <Image
+                src={TelegramDark}
+                alt=""
+                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+              />
+            </div>
           </Link>
           <Link href="x.com">
-          <div className="relative group w-12 h-12 cursor-pointer">
-            <Image
-              src={XLight}
-              alt=""
-              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
-            />
-            <Image
-              src={XDark}
-              alt=""
-              className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-            />
-          </div>
+            <div className="relative group w-12 h-12 group">
+              <Image
+                src={XLight}
+                alt=""
+                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+              />
+              <Image
+                src={XDark}
+                alt=""
+                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+              />
+            </div>
           </Link>
         </div>
       </section>
