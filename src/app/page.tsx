@@ -22,6 +22,8 @@ import VectorUp from "../../public/Vector 56.svg";
 import VectorDown from "../../public/vector-down.png";
 import Gaming from "../../public/gaming.png";
 import Logo from "../../public/logo.png";
+import Open from "../../public/open.png"
+import Close from "../../public/close.png"
 
 
 
@@ -29,6 +31,8 @@ const strokeStyle = {
   textShadow:
     "-1px -1px 0 #F5BF2D, 1px -1px 0 #F5BF2D, -1px 1px 0 #F5BF2D, 1px 1px 0 #F5BF2D",
 };
+
+
 
 export default function Home() {
   return (
@@ -80,6 +84,7 @@ export default function Home() {
         />
       </section>
 
+      <Image src={Open} alt="" />
       {/* About section */}
       <section
         className="mt-32 lg:mt-96 px-1 lg:px-20 py-20 lg:pb-36 gap-10"
@@ -240,7 +245,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mobile navigation menu widgets */}
+      {/* Desktop navigation menu widgets */}
       <section className="z-50 hidden fixed lg:flex flex-col gap-3 bottom-72 right-0">
         <Link href="#home">
           <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group hover:border-gradient items-center">
