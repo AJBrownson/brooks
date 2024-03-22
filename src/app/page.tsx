@@ -177,9 +177,11 @@ export default function Home() {
               Building Rooks First Gaming System
             </h1>
             <p className="mb-4">Join us to be part of the movement.</p>
-            <button className="bg-black text-white px-3 py-3 w-60">
+            <div>
+            <button className="bg-black text-white px-3 lg:px-7 py-3">
               In Development
             </button>
+            </div>
           </div>
           <Image src={Gaming} alt="" />
         </div>
