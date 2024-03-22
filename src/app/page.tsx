@@ -20,6 +20,7 @@ import DiscordLight from "../../public/DiscordLight.png";
 import VectorUp from "../../public/Vector 56.svg";
 import VectorDown from "../../public/vector-down.png";
 import Gaming from "../../public/gaming.png";
+import Logo from "../../public/logo.png";
 import "./custom.css";
 
 const strokeStyle = {
@@ -34,7 +35,7 @@ export default function Home() {
       <Image src={Hero} alt="" className="w-full object-cover" id="home" />
       <section className="z-50 absolute top-56 text-center px-8 lg:px-0">
         <h1
-          className="text-center text-[90px] lg:text-[164px] font-orbitron font-extrabold"
+          className="mb-[-1.5rem] text-center text-[90px] lg:text-[164px] font-orbitron font-extrabold"
           style={strokeStyle}
         >
           <span className="text-[#00D5E9]">R</span>oo
@@ -112,6 +113,7 @@ export default function Home() {
         </div>
       </section> */}
 
+      {/* About section */}
       <section
         className="mt-28 lg:mt-96 px-8 lg:px-20 py-20 pb-36 gap-10"
         id="about"
@@ -169,7 +171,7 @@ export default function Home() {
 
       {/* Gaming section */}
       <section className="mt-36 lg:px-20">
-        <div className="py-10 px-8 flex items-center gap-60 bg-custom-gradient">
+        <div className="py-6 px-8 flex items-center gap-60 bg-custom-gradient">
           <div className="flex flex-col">
             <h1 className="font-orbitron font-bold text-4xl leading-snug mb-3">
               Building Rooks First Gaming System
@@ -188,7 +190,7 @@ export default function Home() {
       <section className="px-8 lg:px-20 py-24" id="tokenomics">
         <div className="container flex flex-col mx-auto sm:py-12 lg:py-24 lg:flex-row justify-between">
           <div className="flex flex-col justify-center lg:p-4 text-center lg:max-w-xl">
-            <h1 className="text-center leading-snug text-4xl lg:text-5xl font-orbitron">
+            <h1 className="text-center leading-snug text-4xl lg:text-5xl font-orbitron font-semibold">
               Tokenomics
             </h1>
 
@@ -219,22 +221,43 @@ export default function Home() {
       {/* Footer section */}
       <section className="bg-small text-center text-[#EDEDED] py-5 px-8 lg:px-64">
         <Image src={VectorUp} alt="" className="mb-16" />
-        <h1 className="text-4xl lg:text-5xl font-orbitron mb-5">
+        <h1 className="text-4xl lg:text-5xl font-orbitron font-extrabold">
           Contact Rooks
         </h1>
+        <div className="mt-5 mb-5 flex justify-center">
+          <Image src={Logo} alt="" />
+        </div>
         <div className="flex justify-center gap-5 mb-14">
-          <Image src={X} alt="" />
-          <Image src={Discord} alt="" />
-          <Image src={Telegram} alt="" />
+          <Link href="#">
+            <Image
+              src={Discord}
+              alt=""
+              className="p-3 w-14 h-14 border border-white group hover:border-gradient"
+            />
+          </Link>
+          <Link href="#">
+            <Image
+              src={Telegram}
+              alt=""
+              className="p-3 w-14 h-14 border border-white group hover:border-gradient"
+            />
+          </Link>
+          <Link href="#">
+            <Image
+              src={X}
+              alt=""
+              className="p-3 w-14 h-14 border border-white group hover:border-gradient"
+            />
+          </Link>
         </div>
         <p className="font-orbitron font-semibold text-lg text-[#00D5E9] mb-5">
           $Rooks coin is a tribute to the meme we all adore.
         </p>
         <p className="text-lg">
-          $Rooks coin is a tribute to the meme we all adore. $ROOKS is a
-          lighthearted meme coin created purely for entertainment. It's not
-          designed for making money or any financial gain. There's no formal
-          team or roadmap behind it, just a fun token in the world of memes.
+          $ROOKS is a lighthearted meme coin created purely for entertainment.
+          It's not designed for making money or any financial gain. There's no
+          formal team or roadmap behind it, just a fun token in the world of
+          memes.
         </p>
         <Image src={VectorDown} alt="" className="mt-10 lg:mt-16 lg:mb-3" />
 

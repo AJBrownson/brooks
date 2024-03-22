@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-key */
 // import { FaFigma, FaDiscord, FaTwitter, FaFacebook } from "react-icons/fa";
 import Image from "next/image";
-import NFT from "../../public/nft0.svg";
-import NFT1 from "../../public/nft1.svg";
+import NFT from "../../public/nft0.png";
+import NFT1 from "../../public/nft1.png"
 
-//   const LOGOS = [
+//   const NFT1S = [
 //     <FaFigma width={24} height={24} className="text-slate-800" />,
 //     <FaDiscord width={24} height={24} className="text-slate-800" />,
 //     <FaTwitter width={24} height={24} className=" text-slate-800" />,
@@ -12,7 +12,7 @@ import NFT1 from "../../public/nft1.svg";
 //   ];
 
 //   export const InfiniteSlider = () => {
-//     const LOGOS = [
+//     const NFT1S = [
 //         <>
 //         <Image src={NFT} alt='' />
 //         <Image src={NFT1} alt='' />
@@ -29,20 +29,20 @@ import NFT1 from "../../public/nft1.svg";
 //     return (
 //       <div className="relative m-auto overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] after:content-['']">
 //         <div className="animate-infinite-slider flex w-[calc(250px*10)]">
-//           {LOGOS.map((logo, index) => (
+//           {NFT1S.map((NFT1, index) => (
 //             <div
 //               className="slide flex w-full items-center justify-center"
 //               key={index}
 //             >
-//               {logo}
+//               {NFT1}
 //             </div>
 //           ))}
-//           {LOGOS.map((logo, index) => (
+//           {NFT1S.map((NFT1, index) => (
 //             <div
 //               className="slide flex w-full items-center justify-center"
 //               key={index}
 //             >
-//               {logo}
+//               {NFT1}
 //             </div>
 //           ))}
 //         </div>
