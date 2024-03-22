@@ -132,9 +132,9 @@ export default function Home() {
       </section>
 
       {/* Carousel section */}
-      {/* <section>
+      <section>
         <InfiniteSlider />
-      </section> */}
+      </section>
 
       {/* Gaming section */}
       {/* <section className="mt-36 lg:px-20">
