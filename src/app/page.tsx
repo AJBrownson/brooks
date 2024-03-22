@@ -137,26 +137,26 @@ export default function Home() {
       </section>
 
       {/* Gaming section */}
-      {/* <section className="mt-36 lg:px-20">
-        <div className="py-6 px-8 flex items-center gap-60 bg-custom-gradient">
-          <div className="flex flex-col">
-            <h1 className="font-orbitron font-bold text-4xl leading-snug mb-3">
+      <section className="mt-36 px-5 lg:px-20">
+        <div className="py-6 px-5 lg:px-8 flex items-center lg:gap-60 bg-custom-gradient">
+          <div className="w-[50%] flex flex-col">
+            <h1 className="font-orbitron font-bold text-base lg:text-4xl leading-snug mb-3">
               Building Rooks First Gaming System
             </h1>
-            <p className="mb-4">Join us to be part of the movement.</p>
+            <p className="text-sm mb-4">Join us to be part of the movement.</p>
             <div>
-            <button className="bg-black text-white px-3 lg:px-7 py-3">
+            <button className="text-sm lg:text-base bg-black text-white px-3 lg:px-7 py-3">
               In Development
             </button>
             </div>
           </div>
-          <Image src={Gaming} alt="" />
+          <Image src={Gaming} alt="" className="w-28 h-28 lg:h-full lg:w-full" />
         </div>
-      </section> */}
+      </section>
 
       {/* Tokenomics section */}
       {/* lg:justify-between justify-center rounded-sm  xl:max-w-lg lg:text-left */}
-      {/* <section className="px-8 lg:px-20 py-24" id="tokenomics">
+      <section className="px-4 lg:px-20 py-24" id="tokenomics">
         <div className="container flex flex-col mx-auto sm:py-12 lg:py-24 lg:flex-row justify-between">
           <div className="flex flex-col justify-center lg:p-4 text-center lg:max-w-xl">
             <h1 className="text-center leading-snug text-4xl lg:text-5xl font-orbitron font-semibold">
@@ -171,11 +171,16 @@ export default function Home() {
               <div className="p-1 bg-[#9900FF] h-4 w-4"></div>
             </div>
 
+            <p className="lg:hidden text-center mb-5 text-base">
+              No taxes, no nonsense. It's as straightforward as that. LP tokens
+              are destroyed, and contract ownership is relinquished.
+            </p>
+
             <div className="mb-10 lg:mb-0 lg:hidden flex items-center justify-center mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96">
-              <Image src={Circle} alt="" />
+              <Image src={Circle} alt="" className="w-[22rem] lg:w-full" />
             </div>
 
-            <p className="text-center mt-6 mb-2 text-lg">
+            <p className="hidden lg:block text-center mt-6 mb-2 text-lg">
               No taxes, no nonsense. It's as straightforward as that. LP tokens
               are destroyed, and contract ownership is relinquished.
             </p>
@@ -185,10 +190,10 @@ export default function Home() {
             <Image src={Circle} alt="" />
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Footer section */}
-      {/* <section className="bg-small text-center text-[#EDEDED] py-5 px-8 lg:px-64">
+      <section className="bg-small text-center text-[#EDEDED] py-5 px-3 lg:px-64">
         <Image src={VectorUp} alt="" className="mb-16" />
         <h1 className="text-4xl lg:text-5xl font-orbitron font-extrabold">
           Contact Rooks
@@ -233,7 +238,7 @@ export default function Home() {
         <div className="font-orbitron font-medium text-xs lg:text-md">
           <p>2024 Rooks. All rights reserved!</p>
         </div>
-      </section> */}
+      </section>
 
       {/* Mobile navigation menu widgets */}
       <section className="z-50 hidden fixed lg:flex flex-col gap-3 bottom-72 right-0">
