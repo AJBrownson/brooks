@@ -1,8 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
+import { useState } from "react";
+import ModalDialog from "react-basic-modal-dialog";
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "../../public/hero.svg";
-import HeroMobile from "../../public/hero-mobile.png"
+import HeroMobile from "../../public/hero-mobile.png";
 import About from "../../public/about-hero.png";
 import LockWhite from "../../public/lock-white.svg";
 import LockBlack from "../../public/lock-black.svg";
@@ -23,22 +26,32 @@ import VectorDown from "../../public/vector-down.png";
 import Gaming from "../../public/gaming.png";
 import Logo from "../../public/logo.png";
 import NavMenu from "@/components/NavMenu";
-
-
+import Airdrop from "../../public/airdrop.png";
 
 const strokeStyle = {
   textShadow:
     "-1px -1px 0 #F5BF2D, 1px -1px 0 #F5BF2D, -1px 1px 0 #F5BF2D, 1px 1px 0 #F5BF2D",
 };
 
-
-
 export default function Home() {
+  const [isDialogVisible, setIsDialogVisible] = useState(false);
+  const openDialog = () => setIsDialogVisible(true);
+  const closeDialog = () => setIsDialogVisible(false);
+
   return (
     <main className="font-space relative">
       {/* Hero images */}
-      <Image src={Hero} alt="" className="hidden lg:block w-full object-cover" id="home" />
-      <Image src={HeroMobile} alt="" className="w-full object-cover lg:hidden" />
+      <Image
+        src={Hero}
+        alt=""
+        className="hidden lg:block w-full object-cover"
+        id="home"
+      />
+      <Image
+        src={HeroMobile}
+        alt=""
+        className="w-full object-cover lg:hidden"
+      />
 
       {/* Mobile menu navigation */}
       <section className="absolute top-5 right-16 lg:hidden">
@@ -59,7 +72,10 @@ export default function Home() {
           had their moment, now it's Rook's time to shine.
         </p>
         <div className="flex lg:items-center justify-center gap-3">
-          <button className="mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 border border-white text-white hover:border-white relative group hover:border-gradient inline-flex items-center">
+          <button
+            onClick={openDialog}
+            className="mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 border border-white text-white hover:border-white relative group hover:border-gradient inline-flex items-center"
+          >
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
               Mint Rooks <Image src={LockWhite} alt="" className="ml-2" />
             </span>
@@ -155,9 +171,9 @@ export default function Home() {
             </h1>
             <p className="text-sm mb-4">Join us to be part of the movement.</p>
             <div>
-            <button className="text-xs lg:text-base bg-black text-white px-3 lg:px-7 py-3">
-              In Development
-            </button>
+              <button className="text-xs lg:text-base bg-black text-white px-3 lg:px-7 py-3">
+                In Development
+              </button>
             </div>
           </div>
           <Image src={Gaming} alt="" className="w-32 h-32 lg:w-80 lg:h-80" />
@@ -342,6 +358,54 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Dialog modal section */}
+      <ModalDialog
+        isDialogVisible={isDialogVisible}
+        closeDialog={closeDialog}
+        dialogClassName="lg:max-w-lg border border-gray-700 overflow-hidden relative backdrop:bg-black/60"
+      >
+        <div className="p-4 bg-[#0D0D0D] text-[#EDEDED]">
+          <div className="py-6 px-8 lg:px-0 border-b border-solid border-gray-700">
+            <h1 className="font-orbitron font-semibold lg:text-2xl text-center">
+              COMMUNITY AIRDROP
+            </h1>
+            <button
+              className="font-orbitron text-xl font-thin hover:font-semibold absolute top-10 right-10"
+              onClick={closeDialog}
+            >
+              X
+            </button>
+          </div>
+
+          <div className="mt-5 text-center">
+            <p className="text-[#00CCFF] font-medium">
+              We're distributing 9000 $ROOKS token to mint pass holders
+            </p>
+            <p className="font-medium">
+              Hold onto your ROOKS mint pass and prepare for our upcoming
+              community airdrops.
+            </p>
+          </div>
+
+          {/* px-8 */}
+          <div className="p-6 flex flex-col items-center justify-center w-full"> 
+            <Image src={Airdrop} alt="" className="lg:w-64 lg:h-64" />
+            <button
+              onClick={openDialog}
+              className="mt-4 lg:mt-8 px-32 lg:px-32 py-5 lg:py-6 text-center border border-transparent hover:border-white relative group hover:border-gradient inline-flex items-center"
+            >
+              <span className="bg-[#EDEDED] text-[#0D0D0D] transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
+                Mint Now!
+              </span>
+
+              <span className="transition-opacity opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center">
+                Mint Now!
+              </span>
+            </button>
+          </div>
+        </div>
+      </ModalDialog>
     </main>
   );
 }
