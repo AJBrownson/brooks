@@ -146,21 +146,21 @@ export default function Home() {
         <InfiniteSlider />
       </section>
 
-      {/* Gaming section */}
-      <section className="mt-36 px-5 lg:px-20">
-        <div className="py-6 px-5 lg:px-8 flex items-center lg:gap-60 bg-custom-gradient">
-          <div className="w-[50%] flex flex-col">
+      {/* Gaming section gap-10 w-50% w-28 h-28*/}
+      <section className="mt-20 lg:mt-36 px-5 lg:px-20">
+        <div className="py-6 px-5 lg:px-8 flex justify-between lg:gap-40 items-center bg-custom-gradient">
+          <div className="w-1/2 lg:w-[45%] flex flex-col">
             <h1 className="font-orbitron font-bold text-base lg:text-4xl leading-snug mb-3">
               Building Rooks First Gaming System
             </h1>
             <p className="text-sm mb-4">Join us to be part of the movement.</p>
             <div>
-            <button className="text-sm lg:text-base bg-black text-white px-3 lg:px-7 py-3">
+            <button className="text-xs lg:text-base bg-black text-white px-3 lg:px-7 py-3">
               In Development
             </button>
             </div>
           </div>
-          <Image src={Gaming} alt="" className="w-28 h-28 lg:h-full lg:w-full" />
+          <Image src={Gaming} alt="" className="w-32 h-32 lg:w-80 lg:h-80" />
         </div>
       </section>
 
