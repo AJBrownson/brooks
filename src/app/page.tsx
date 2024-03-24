@@ -22,8 +22,7 @@ import VectorUp from "../../public/Vector 56.svg";
 import VectorDown from "../../public/vector-down.png";
 import Gaming from "../../public/gaming.png";
 import Logo from "../../public/logo.png";
-import Open from "../../public/open.png"
-import Close from "../../public/close.png"
+import NavMenu from "@/components/NavMenu";
 
 
 
@@ -37,10 +36,17 @@ const strokeStyle = {
 export default function Home() {
   return (
     <main className="font-space relative">
-      {/* Hero section */}
+      {/* Hero images */}
       <Image src={Hero} alt="" className="hidden lg:block w-full object-cover" id="home" />
       <Image src={HeroMobile} alt="" className="w-full object-cover lg:hidden" />
-      <section className="z-50 absolute top-36 lg:top-56 text-center px-1 lg:px-0">
+
+      {/* Mobile menu navigation */}
+      <section className="absolute top-5 right-16 lg:hidden">
+        <NavMenu />
+      </section>
+
+      {/* Hero section */}
+      <section className="z-10 absolute top-36 lg:top-56 text-center px-1 lg:px-0">
         <h1
           className="mb-[-1.5rem] text-center text-[72px] lg:text-[164px] font-orbitron font-extrabold"
           style={strokeStyle}
@@ -84,7 +90,6 @@ export default function Home() {
         />
       </section>
 
-      <Image src={Open} alt="" />
       {/* About section */}
       <section
         className="mt-32 lg:mt-96 px-1 lg:px-20 py-20 lg:pb-36 gap-10"
@@ -120,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* Story section */}
-      <section className="py-10 px-1 lg:px-60 bg-small">
+      <section className="py-10 px-1 lg:px-60 bg-story-gradient">
         <h1 className="text-[#00D5E9] text-center font-extrabold text-lg lg:text-2xl mb-5">
           Rooks Revolution: Shaping the Future of Memes
         </h1>
@@ -198,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* Footer section */}
-      <section className="bg-small text-center text-[#EDEDED] py-5 px-3 lg:px-64">
+      <section className="bg-footer-gradient text-center text-[#EDEDED] pb-5 px-3 lg:px-64">
         <Image src={VectorUp} alt="" className="mb-16" />
         <h1 className="text-4xl lg:text-5xl font-orbitron font-extrabold">
           Contact Rooks

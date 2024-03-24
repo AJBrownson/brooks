@@ -37,6 +37,19 @@ body {
   background: linear-gradient(101.63deg, #1000D9 35.64%, #00CCFF 53.32%, #00CCFF 61.03%, #000000 87.96%);
 }
 
+/* .bg-story-gradient {
+  background: linear-gradient(90deg, #00E8B9 1%, #0D0D0D 15%, #0D0D0D 85%, #00E8B9 99%);
+} */
+
+
+.bg-story-gradient {
+  background: linear-gradient(90deg, rgba(0, 232, 185, 0.4) 1%, rgba(13, 13, 13, 0.6) 10%, rgba(13, 13, 13, 0.6) 90%, rgba(0, 232, 185, 0.4) 99%);
+}
+
+.bg-footer-gradient {
+  background: linear-gradient(90deg, rgba(0, 232, 185, 0.3) 1%, rgba(13, 13, 13, 0.6) 10%, rgba(13, 13, 13, 0.6) 90%, rgba(0, 232, 185, 0.3) 99%);
+}
+
 
 /* @layer utilities {
   .text-balance {
