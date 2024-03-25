@@ -29,7 +29,9 @@ import NavMenu from "@/components/NavMenu";
 import Airdrop from "../../public/airdrop.png";
 import Countdown from "@/components/Countdown";
 import Cancel from "../../public/cancel-01.png"
-
+import Memes from "../../public/memes.png"
+import Stages from "../../public/stages.png"
+import StagesWeb from "../../public/stages-web.png"
 
 
 
@@ -194,8 +196,8 @@ export default function Home() {
 
       {/* Tokenomics section */}
       {/* lg:justify-between justify-center rounded-sm  xl:max-w-lg lg:text-left */}
-      <section className="mt-20 px-4 lg:px-20 pb-24" id="tokenomics">
-        <div className="container flex flex-col mx-auto sm:py-12 lg:py-24 lg:flex-row justify-between">
+      <section className="mt-20 px-4 lg:px-20 mb-20" id="tokenomics">
+        <div className="container flex flex-col mx-auto sm:pt-12 sm:pb-5 lg:pt-24 lg:pb-12 lg:flex-row justify-between">
           <div className="flex flex-col justify-center lg:p-4 text-center lg:max-w-xl">
             <h1 className="text-center leading-snug text-[28px] lg:text-5xl font-orbitron font-semibold">
               Tokenomics
@@ -228,10 +230,23 @@ export default function Home() {
             <Image src={Circle} alt="" className="W-20 " />
           </div>
         </div>
+        <Image src={VectorDown} alt="" />
+      </section>
+
+      {/* Roadmap section */}
+      <section className="mb-24" id="roadmap">
+      <h1 className="text-center text-[28px] lg:text-5xl font-orbitron font-semibold">
+          Roadmap
+        </h1>
+        <div className="lg:pl-16 mt-20 flex flex-col justify-between items-center lg:items-baseline lg:gap-10 lg:flex-row">
+          <Image src={Memes} alt="" className="w-48 lg:w-60" />
+          <Image src={StagesWeb} alt="" className="hidden lg:block w-[83rem] overflow-hidden" />
+          <Image src={Stages} alt="" className="mt-8 lg:hidden" />
+        </div>
       </section>
 
       {/* Footer section */}
-      <section className="mt-[-80px] bg-footer-gradient text-center text-[#EDEDED] pb-5 px-[8px] lg:px-64">
+      <section className="bg-footer-gradient text-center text-[#EDEDED] pb-5 px-[8px] lg:px-64">
         <Image src={VectorUp} alt="" className="mb-4" />
         <h1 className="text-[28px] lg:text-5xl font-orbitron font-semibold">
           Contact Rooks
@@ -279,7 +294,7 @@ export default function Home() {
       </section>
 
       {/* Desktop navigation menu widgets */}
-      <section className="z-50 hidden fixed lg:flex flex-col gap-3 bottom-72 right-0">
+      <section className="z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0">
         <Link href="#home">
           <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group hover:border-gradient items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
@@ -313,7 +328,19 @@ export default function Home() {
             </span>
           </div>
         </Link>
-        <Link href="#">
+        <Link href="#roadmap">
+        <div
+          className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center"
+        >
+          <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
+            Roadmap
+          </span>
+
+          <span className="transition-opacity opacity-0 group-hover:opacity-100">
+            Roadmap
+          </span>
+        </div>
+        </Link>
           <div onClick={openDialog} className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Mint Rooks <Image src={LockBlack} alt="" className="ml-2" />
@@ -323,7 +350,6 @@ export default function Home() {
               Coming Soon
             </span>
           </div>
-        </Link>
 
         <div className="flex justify-between gap-3">
           <Link href="discord.com">
