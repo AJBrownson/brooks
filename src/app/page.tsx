@@ -28,6 +28,8 @@ import Logo from "../../public/logo.png";
 import NavMenu from "@/components/NavMenu";
 import Airdrop from "../../public/airdrop.png";
 import Countdown from "@/components/Countdown";
+import Cancel from "../../public/cancel-01.png"
+
 
 
 
@@ -88,7 +90,7 @@ export default function Home() {
             </span>
           </button>
 
-          <button className="font-light mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 bg-[#0099FF] hover:bg-transparent border border-transparent hover:border-white relative group inline-flex items-center">
+          <button className="font-light mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 bg-[#0099FF] hover:bg-[#0182D8] border border-transparent hover:border-transparent relative inline-flex items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
               Presale <Image src={LockWhite} alt="" className="ml-2" />
             </span>
@@ -177,7 +179,7 @@ export default function Home() {
             <h1 className="font-orbitron font-bold text-sm lg:text-4xl leading-snug mb-3">
               Building Rooks First Gaming System
             </h1>
-            <p className="text-sm mb-4">Join us to be part of the movement.</p>
+            <p className="text-sm lg:text-base mb-4">Join us to be part of the movement.</p>
             <div>
               <button className="text-xs lg:text-base bg-black text-white px-3 lg:px-7 py-3">
                 In Development
@@ -233,7 +235,7 @@ export default function Home() {
           Contact Rooks
         </h1>
         <div className="mt-5 mb-5 flex justify-center">
-          <Image src={Logo} alt="" className="w-20 h-20 lg:w-full lg:h-full"/>
+          <Image src={Logo} alt="" className="w-20 h-20 "/>
         </div>
         <div className="flex justify-center gap-5 mb-6 lg:mb-14">
           <Link href="#">
@@ -277,7 +279,7 @@ export default function Home() {
       {/* Desktop navigation menu widgets */}
       <section className="z-50 hidden fixed lg:flex flex-col gap-3 bottom-72 right-0">
         <Link href="#home">
-          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group hover:border-gradient items-center">
+          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group hover:border-gradient items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Home
             </span>
@@ -288,7 +290,7 @@ export default function Home() {
           </div>
         </Link>
         <Link href="#about">
-          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               About
             </span>
@@ -299,7 +301,7 @@ export default function Home() {
           </div>
         </Link>
         <Link href="#tokenomics">
-          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Tokenomics
             </span>
@@ -310,7 +312,7 @@ export default function Home() {
           </div>
         </Link>
         <Link href="#">
-          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Mint Rooks <Image src={LockBlack} alt="" className="ml-2" />
             </span>
@@ -374,40 +376,40 @@ export default function Home() {
         dialogClassName="lg:max-w-lg border border-gray-700 overflow-hidden relative backdrop:bg-black/60"
       >
         <div className="p-3 bg-[#0D0D0D] text-[#EDEDED]">
-          <div className="py-6 px-8 lg:px-0 border-b border-solid border-gray-700">
-            <h1 className="font-orbitron font-semibold lg:text-2xl text-center">
+          <div className="py-3 pb-4 px-8 lg:px-0 border-b border-solid border-gray-700">
+            <h1 className="font-orbitron font-semibold lg:text-xl text-center">
               COMMUNITY AIRDROP
             </h1>
             <button
-              className="font-orbitron text-xl font-thin hover:font-semibold absolute top-10 right-10"
+              className="font-orbitron text-xl font-thin hover:font-semibold absolute top-6 lg:top-6 right-2 lg:right-4"
               onClick={closeDialog}
             >
-              X
+              <Image src={Cancel} alt="" />
             </button>
           </div>
 
           <div className="mt-5 text-center">
-            <p className="text-[#00CCFF] font-medium">
+            <p className="text-[#00CCFF] text-sm font-medium">
               We're distributing 9000 $ROOKS token to mint pass holders
             </p>
-            <p className="font-medium">
+            <p className="text-sm font-medium">
               Hold onto your ROOKS mint pass and prepare for our upcoming
               community airdrops.
             </p>
           </div>
 
           {/* px-8 */}
-          <div className="p-6 flex flex-col items-center justify-center w-full"> 
-            <Image src={Airdrop} alt="" className="lg:w-64 lg:h-64" />
+          <div className="p-6 pb-1 flex flex-col items-center justify-center w-full"> 
+            <Image src={Airdrop} alt="" className="w-48 lg:w-52" />
             <button
               onClick={openDialog}
-              className="mt-4 lg:mt-8 px-32 lg:px-32 py-5 lg:py-6 text-center border border-transparent hover:border-white relative group hover:border-gradient inline-flex items-center"
+              className="mt-4 lg:mt-8 px-24 lg:px-24 py-5 lg:py-6 text-center border border-transparent hover:border-white relative group hover:border-gradient inline-flex items-center"
             >
-              <span className="bg-[#EDEDED] text-[#0D0D0D] transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
+              <span className="font-medium bg-[#EDEDED] text-[#0D0D0D] transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
                 Mint Now!
               </span>
 
-              <span className="transition-opacity opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center">
+              <span className="font-medium transition-opacity opacity-0 group-hover:opacity-100 absolute inset-0 flex items-center justify-center">
                 Mint Now!
               </span>
             </button>

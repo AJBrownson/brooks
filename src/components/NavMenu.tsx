@@ -40,7 +40,7 @@ export default function NavMenu() {
         }
       >
         <Link href="#home">
-          <div className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group hover:border-gradient items-center">
+          <div className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group hover:border-gradient items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Home
             </span>
@@ -51,7 +51,7 @@ export default function NavMenu() {
           </div>
         </Link>
         <Link href="#about">
-          <div className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               About
             </span>
@@ -62,7 +62,7 @@ export default function NavMenu() {
           </div>
         </Link>
         <Link href="#tokenomics">
-          <div className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Tokenomics
             </span>
@@ -73,7 +73,7 @@ export default function NavMenu() {
           </div>
         </Link>
         <Link href="#">
-          <div className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-transparent hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Mint Rooks <Image src={LockBlack} alt="" className="ml-2" />
             </span>
