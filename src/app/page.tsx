@@ -118,7 +118,7 @@ export default function Home() {
 
       {/* About section */}
       <section
-        className="mt-40 lg:mt-96 px-2 lg:px-20 lg:pb-36 gap-10"
+        className="mt-60 lg:mt-96 px-2 lg:px-20 lg:pb-36 gap-10"
         id="about"
       >
         <Image src={VectorUp} alt="" className="mb-4" />
@@ -151,7 +151,7 @@ export default function Home() {
       </section>
 
       {/* Story section */}
-      <section className="mt-4 pb-4 py-10 px-[8px] lg:px-60 bg-story-gradient">
+      <section className="mt-16 lg:mt-4 pb-4 py-10 px-[8px] lg:px-60 bg-story-gradient">
         <h1 className="text-[#00D5E9] font-orbitron text-center font-extrabold text-lg lg:text-2xl mb-5">
           Rooks Revolution: Shaping the Future of Memes
         </h1>
