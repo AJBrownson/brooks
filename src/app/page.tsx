@@ -269,9 +269,9 @@ export default function Home() {
           formal team or roadmap behind it, just a fun token in the world of
           memes.
         </p>
-        <Image src={VectorDown} alt="" className="mt-4 lg:mt-16 lg:mb-3" />
+        <Image src={VectorDown} alt="" className="mt-5 lg:mt-16 lg:mb-3" />
 
-        <div className="font-orbitron font-medium text-xs lg:text-md">
+        <div className="font-orbitron font-medium text-[10px] lg:text-md">
           <p className="text-[#999999] mt-4">2024 Rooks. All rights reserved!</p>
         </div>
       </section>
