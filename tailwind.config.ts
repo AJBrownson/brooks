@@ -27,7 +27,7 @@ const config: Config = {
       },
     },
     animation: {
-      'infinite-scroll': "infinite-scroll 80s linear infinite",
+      'infinite-scroll': "infinite-scroll 20s linear infinite",
     },
     keyframes: {
       'infinite-scroll': {
