@@ -4,16 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 import Open from "../../public/open.png";
 import Close from "../../public/close.png";
-import Telegram from "../../public/telegram.png";
 import TelegramDark from "../../public/TelegramDark.png";
 import TelegramLight from "../../public/TelegramLight.png";
-import X from "../../public/X.png";
 import XDark from "../../public/XDark.png";
 import XLight from "../../public/XLight.png";
-import Discord from "../../public/Discord.png";
 import DiscordDark from "../../public/DiscordDark.png";
 import DiscordLight from "../../public/DiscordLight.png";
-import LockWhite from "../../public/lock-white.svg";
 import LockBlack from "../../public/lock-black.svg";
 
 

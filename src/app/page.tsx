@@ -43,6 +43,8 @@ export default function Home() {
   const openDialog = () => setIsDialogVisible(true);
   const closeDialog = () => setIsDialogVisible(false);
 
+
+
   return (
     <main className="font-space relative">
       {/* Hero images */}
@@ -312,7 +314,7 @@ export default function Home() {
           </div>
         </Link>
         <Link href="#">
-          <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
+          <div onClick={openDialog} className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
               Mint Rooks <Image src={LockBlack} alt="" className="ml-2" />
             </span>
@@ -373,6 +375,7 @@ export default function Home() {
       <ModalDialog
         isDialogVisible={isDialogVisible}
         closeDialog={closeDialog}
+        openDialog={openDialog}
         dialogClassName="lg:max-w-lg border border-gray-700 overflow-hidden relative backdrop:bg-black/60"
       >
         <div className="p-3 bg-[#0D0D0D] text-[#EDEDED]">
