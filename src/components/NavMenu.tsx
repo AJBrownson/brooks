@@ -2,7 +2,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ModalDialog from "react-basic-modal-dialog";
 import Open from "../../public/open.png";
 import Close from "../../public/close.png";
@@ -17,8 +17,11 @@ import Cancel from "../../public/cancel-01.png";
 import Airdrop from "../../public/airdrop.png";
 
 
+
+
 export default function NavMenu() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const mobileMenu = useRef(null)
   const [isDialogVisible, setIsDialogVisible] = useState(false);
   const openDialog = () => setIsDialogVisible(true);
   const closeDialog = () => setIsDialogVisible(false);
@@ -27,14 +30,29 @@ export default function NavMenu() {
     setOpenMobileMenu(!openMobileMenu);
   };
 
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (mobileMenu.current && !((mobileMenu.current as HTMLElement).contains(event.target as Node))) {
+      setOpenMobileMenu(false);
+    }
+  };
+  
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [mobileMenu]);
+
+
+
   return (
     <main className="fixed z-20">
       {/* mobile menu div */}
-      <div onClick={handleMenuClick} className="block lg:hidden">
+      <div ref={mobileMenu} onClick={handleMenuClick} className="block lg:hidden">
         {openMobileMenu ? (
-          <Image src={Close} alt="" className="" />
+          <Image src={Close} alt="" />
         ) : (
-          <Image src={Open} alt="" className="" />
+          <Image src={Open} alt="" />
         )}
       </div>
       <div
