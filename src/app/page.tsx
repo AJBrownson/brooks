@@ -48,7 +48,7 @@ export default function Home() {
 
 
   return (
-    <main className="font-space relative xl:max-w-7xl">
+    <main className="font-space relative 2xl:max-w-7xl">
 
             {/* Mobile menu navigation
             <section className="fixed lg:hidden">
@@ -94,9 +94,10 @@ export default function Home() {
           The most shareable meme coin out there. While the dogs and frogs have
           had their moment, now it's Rook's time to shine.
         </p>
+
         <div className="mt-2 flex lg:items-center justify-center gap-3">
           <button
-            onClick={openDialog}
+            // onClick={openDialog}
             className="mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 border border-[#3C3C3C] text-white hover:border-white relative group hover:border-gradient inline-flex items-center"
           >
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
@@ -108,7 +109,7 @@ export default function Home() {
             </span>
           </button>
 
-          <button className="font-light mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 bg-[#0099FF] hover:bg-[#0182D8] border border-transparent hover:border-transparent relative inline-flex items-center">
+          <button className="font-light mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 bg-[#0099FF] hover:bg-[#0182D8] group-hover:border-transparent border border-transparent group relative inline-flex items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
               Presale <Image src={LockWhite} alt="" className="ml-2" />
             </span>
@@ -117,6 +118,19 @@ export default function Home() {
               Coming Soon
             </span>
           </button>
+
+          {/* <button
+            // onClick={openDialog}
+            className="mt-4 lg:mt-8 px-20 lg:px-24 py-2 lg:py-3 border border-[#3C3C3C] text-white hover:border-white relative group hover:border-gradient inline-flex items-center"
+          >
+            <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
+              Mint Rooks
+            </span>
+
+            <span className="transition-opacity opacity-0 group-hover:opacity-100">
+             Mint Rooks
+            </span>
+          </button> */}
         </div>
       </section>
 

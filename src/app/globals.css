@@ -4,7 +4,8 @@
 
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0; */
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -43,7 +44,7 @@ body {
 
 
 .bg-story-gradient {
-  background: linear-gradient(90deg, rgba(0, 232, 185, 0.4) 1%, rgba(13, 13, 13, 0.6) 10%, rgba(13, 13, 13, 0.6) 90%, rgba(0, 232, 185, 0.4) 99%);
+  background: linear-gradient(90deg, rgba(0, 232, 185, 0.2) 1%, rgba(13, 13, 13, 0.6) 10%, rgba(13, 13, 13, 0.6) 90%, rgba(0, 232, 185, 0.2) 99%);
 }
 
 .bg-footer-gradient {
@@ -51,7 +52,18 @@ body {
 }
 
 .bg-presale-gradient {
-    background: linear-gradient(90deg, #0099FF, #00BBFF, #00D5E9, #00E8B9, #96F589, #F9F871);
+  background: linear-gradient(90deg, #0099FF, #00BBFF, #00D5E9, #00E8B9, #96F589, #F9F871);
+}
+
+.gradient-triangle {
+  background: conic-gradient(from 180deg,
+      #0099FF,
+      #00BBFF,
+      #00D5E9,
+      #00E8B9,
+      #96F589,
+      #F9F871,
+      #0099FF);
 }
 
 /* @layer utilities {
