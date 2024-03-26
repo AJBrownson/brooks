@@ -246,7 +246,7 @@ export default function Home() {
       </section>
 
       {/* Footer section */}
-      <section className="bg-footer-gradient text-center text-[#EDEDED] pb-5 px-[8px] lg:px-64">
+      <section className="text-center text-[#EDEDED] pb-5 px-[8px] lg:px-64">
         <Image src={VectorUp} alt="" className="mb-4" />
         <h1 className="text-[28px] lg:text-5xl font-orbitron font-semibold">
           Contact Rooks

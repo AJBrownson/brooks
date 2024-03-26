@@ -47,7 +47,7 @@ body {
 }
 
 .bg-footer-gradient {
-  background: linear-gradient(90deg, rgba(0, 232, 185, 0.3) 1%, rgba(13, 13, 13, 0.6) 10%, rgba(13, 13, 13, 0.6) 90%, rgba(0, 232, 185, 0.3) 99%);
+  background: linear-gradient(90deg, rgba(0, 232, 185, 0.3) 1%, #0d0d0d99 10%, rgba(13, 13, 13, 0.6) 90%, rgba(0, 232, 185, 0.3) 99%);
 }
 
 .bg-presale-gradient {
