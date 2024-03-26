@@ -48,7 +48,12 @@ export default function Home() {
 
 
   return (
-    <main className="font-space relative">
+    <main className="font-space relative xl:max-w-7xl">
+
+            {/* Mobile menu navigation
+            <section className="fixed lg:hidden">
+        <NavMenu />
+      </section> */}
       {/* Hero images */}
       <Image
         src={Hero}
@@ -67,10 +72,19 @@ export default function Home() {
         <NavMenu />
       </section>
 
+            {/* Gradient section */}
+      <section>
+        <Image
+          src={Gradient}
+          alt="A gradient picture"
+          className="lg:h-[21.5rem] absolute top-[9.5rem] md:top-72 lg:top-[12rem]"
+        />
+      </section>
+
       {/* Hero section */}
-      <section className="z-10 absolute top-[9.7rem] lg:top-56 text-center px-[6px] lg:px-0">
+      <section className="absolute z-10 top-[9.7rem] md:top-80 lg:top-56 text-center px-[6px] lg:px-0">
         <h1
-          className="mb-[-12px] text-center text-[72px] lg:text-[164px] font-orbitron font-extrabold"
+          className="mb-[-12px] text-center text-[72px] md:text-[120px] lg:text-[164px] font-orbitron font-extrabold"
           style={strokeStyle}
         >
           <span className="text-[#00D5E9]">R</span>oo
@@ -104,15 +118,6 @@ export default function Home() {
             </span>
           </button>
         </div>
-      </section>
-
-      {/* Gradient section */}
-      <section>
-        <Image
-          src={Gradient}
-          alt="A gradient picture"
-          className="lg:h-[21.5rem] absolute top-[9.5rem] lg:top-[12rem]"
-        />
       </section>
 
       {/* Countdown section */}
@@ -238,7 +243,7 @@ export default function Home() {
       <h1 className="text-center text-[28px] lg:text-5xl font-orbitron font-semibold">
           Roadmap
         </h1>
-        <div className="lg:pl-16 mt-20 flex flex-col justify-between items-center lg:items-baseline lg:gap-10 lg:flex-row">
+        <div className="md:pl-16 mt-20 flex flex-col justify-between items-center md:items-baseline md:gap-10 md:flex-row">
           <Image src={Memes} alt="" className="w-48 lg:w-60" />
           <Image src={StagesWeb} alt="" className="hidden lg:block w-[83rem] overflow-hidden" />
           <Image src={Stages} alt="" className="mt-8 lg:hidden" />
@@ -247,7 +252,7 @@ export default function Home() {
 
       {/* Footer section */}
       <section className="text-center text-[#EDEDED] pb-5 px-[8px] lg:px-64">
-        <Image src={VectorUp} alt="" className="mb-4" />
+        <Image src={VectorUp} alt="" className="mb-4 lg:mb-16" />
         <h1 className="text-[28px] lg:text-5xl font-orbitron font-semibold">
           Contact Rooks
         </h1>
