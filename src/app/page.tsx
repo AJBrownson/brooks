@@ -389,7 +389,7 @@ export default function Home() {
           </div>
         </Link>
         <div
-          onClick={openDialog}
+          // onClick={openDialog}
           className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center"
         >
           <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
