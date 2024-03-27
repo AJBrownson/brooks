@@ -66,6 +66,9 @@ body {
       #0099FF);
 }
 
+text {
+  background-repeat: no-repeat;
+}
 /* @layer utilities {
   .text-balance {
     text-wrap: balance;

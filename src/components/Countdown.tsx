@@ -1,8 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import Image from "next/image";
 import LockWhite from "../../public/lock-white.svg";
-import BG from "../../public/presale-bg.svg"
+import BG from "../../public/presale-bg.svg";
 
 const strokeStyle = {
   textShadow:
@@ -16,64 +16,71 @@ export default function Countdown() {
   const [seconds, setSeconds] = useState(0);
   const [countdownFinished, setCountdownFinished] = useState(false);
 
-  const deadline = "30, March 2024";
-  // const deadline = "11:00 AM";
+  const deadline = "2024-03-27T15:30";
   let interval: any;
   // const intervalRef = useRef(null);
 
+
   useEffect(() => {
-  const getTime = () => {
+    const storedDeadline = localStorage.getItem("deadline");
     let interval: any;
-    const time = Date.parse(deadline) - Date.now();
 
-    setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
-    setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
-    setMinutes(Math.floor((time / 1000 / 60) % 60));
-    setSeconds(Math.floor((time / 1000) % 60));
+    const getTime = () => {
+      const now = Date.now();
+      const deadlineTime = new Date(deadline).getTime();
 
-    if (time <= 0) {
-      setCountdownFinished(true);
-      clearInterval(interval);
-      return;
+      if (now >= deadlineTime) {
+        setCountdownFinished(true);
+        clearInterval(interval);
+        return;
+      }
+
+      const timeRemaining = deadlineTime - now;
+      const daysRemaining = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hoursRemaining = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutesRemaining = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const secondsRemaining = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      setDays(daysRemaining);
+      setHours(hoursRemaining);
+      setMinutes(minutesRemaining);
+      setSeconds(secondsRemaining);
+    };
+
+    if (!storedDeadline) {
+      localStorage.setItem("deadline", Date.parse(deadline).toString());
+    } else {
+      const storedDeadlineTime = parseInt(storedDeadline, 10);
+      if (Date.now() >= storedDeadlineTime) {
+        setCountdownFinished(true);
+      }
     }
-  };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => getTime(deadline), 1000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
-// useEffect line was here
     getTime(); // Call getTime initially to set the state immediately
-    const interval = setInterval(getTime, 1000); // Call getTime inside setInterval
+    interval = setInterval(getTime, 1000); // Call getTime inside setInterval
 
     return () => clearInterval(interval);
   }, []);
-  
-  // const strokeStyle = {
-  //   WebkitTextStroke: "1px #00D5E9",
-  // };
+
 
   return (
     <>
-      <section className="font-orbitron mt-80 md:mt-96 text-center text-[#EDEDED] bg-presale">
-
-      {countdownFinished ? (
-        <h1
-          className="text-lg md:text-2xl tracking-widest font-medium"
-          style={strokeStyle}
-        >
-          PRESALE IS LIVE
-        </h1>
-         ) : (
-        <h1
-          className="text-lg md:text-2xl tracking-widest font-medium"
-          style={strokeStyle}
-        >
-          PRESALE COUNTDOWN
-        </h1>
-    )}
+      <section className="font-orbitron text-center text-[#EDEDED] bg-presale">
+        {countdownFinished ? (
+          <h1
+            className="text-lg md:text-2xl tracking-widest font-medium"
+            style={strokeStyle}
+          >
+            PRESALE IS LIVE
+          </h1>
+        ) : (
+          <h1
+            className="text-lg md:text-2xl tracking-widest font-medium"
+            style={strokeStyle}
+          >
+            PRESALE COUNTDOWN
+          </h1>
+        )}
         <div className="text-xl md:text-4xl flex gap-2 justify-center mt-5">
           <div id="days" className=" flex flex-col mx-1 md:mx-2">
             <p className="font-bold">{days < 10 ? `0${days}` : days}</p>
@@ -90,14 +97,18 @@ export default function Countdown() {
           </div>
           <div>:</div>
           <div id="minutes" className=" flex flex-col mx-1 md:mx-2">
-            <p className="font-bold">{minutes < 10 ? `0${minutes}` : minutes}</p>
+            <p className="font-bold">
+              {minutes < 10 ? `0${minutes}` : minutes}
+            </p>
             <p className="text-[#9C9C9C] font-orbitron text-xs md:text-sm mt-4">
               Minutes
             </p>
           </div>
           <div>:</div>
           <div id="seconds" className=" flex flex-col mx-1 md:mx-2">
-            <p className="text-[#00D5E9] font-bold">{seconds < 10 ? `0${seconds}` : seconds}</p>
+            <p className="text-[#00D5E9] font-bold">
+              {seconds < 10 ? `0${seconds}` : seconds}
+            </p>
             <p className="text-[#9C9C9C] font-orbitron text-xs md:text-sm mt-4">
               Seconds
             </p>

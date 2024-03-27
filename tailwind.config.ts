@@ -11,7 +11,7 @@ const config: Config = {
       backgroundImage: {
         "big": "url('/gradient-bg.svg')",
         "small": "url('/grad.svg')",
-        "presale": "url('/presale-bg.png')",
+        "presale": "url('/presale-bg.svg')",
       },
       gradientColorStops: theme => ({
         'custom-gradient': {

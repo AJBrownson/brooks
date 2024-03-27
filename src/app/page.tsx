@@ -135,11 +135,11 @@ export default function Home() {
       </section>
 
       {/* Countdown section */}
-      <section>
+      {/* <section className="mt-80 md:mt-96">
         <Countdown />
-      </section>
+      </section> */}
 
-      {/* About section */}
+      {/* About section (countdown: mt-28 md:mt-80) */}
       <section
         className="mt-60 lg:mt-96 px-2 lg:px-20 lg:pb-36 gap-10"
         id="about"
