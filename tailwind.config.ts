@@ -9,6 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
+        "heroBig": "url('/hero.svg')",
+        "heroSmall": "url('/hero-mobile.png')",
         "big": "url('/gradient-bg.svg')",
         "small": "url('/grad.svg')",
         "presale": "url('/presale-bg.svg')",

@@ -68,19 +68,19 @@ export default function Home() {
         <NavMenu />
       </section>
 
-      {/* Gradient section */}
+      {/* Gradient section lg:h-[21.5rem] absolute top-[9.5rem] md:top-72 lg:top-[12rem] */}
       <section>
         <Image
           src={Gradient}
           alt="A gradient picture"
-          className="lg:h-[21.5rem] absolute top-[9.5rem] md:top-72 lg:top-[12rem]"
+          className="lg:h-[21.5rem] absolute top-32 md:top-72 lg:top-20 xl:top-[12rem] 2xl:top-32"
         />
       </section>
 
-      {/* Hero section */}
-      <section className="absolute z-10 top-[9.7rem] md:top-80 lg:top-56 text-center px-[6px] lg:px-0">
+      {/* Hero section top-[9.7rem] md:top-80 lg:top-56 : section=> top-32 md:top-80 lg:top-56 */}
+      <section className="top-32 md:top-80 lg:top-40 xl:top-56 2xl:top-48 absolute z-10 text-center px-[6px] lg:px-0">
         <h1
-          className="mb-[-12px] text-center text-[72px] md:text-[120px] lg:text-[164px] font-orbitron font-extrabold"
+          className="mb-[-12px] text-center text-[72px] md:text-[120px] lg:text-[164px] 2xl:text-[200px] font-orbitron font-extrabold"
           style={strokeStyle}
         >
           <span className="text-[#00D5E9]">R</span>oo
@@ -129,6 +129,20 @@ export default function Home() {
           </button> */}
         </div>
       </section>
+
+      {/* <section className="bg-heroSmall h-full pb-2 bg-cover bg-no-repeat">
+      <h1
+          className="mb-[-12px] text-center text-[72px] md:text-[120px] lg:text-[164px] font-orbitron font-extrabold"
+          style={strokeStyle}
+        >
+          <span className="text-[#00D5E9]">R</span>oo
+          <span className="text-[#00D5E9]">ks</span>
+        </h1>
+        <p className="text-sm lg:text-lg lg:px-72 font-orbitron">
+          The most shareable meme coin out there. While the dogs and frogs have
+          had their moment, now it's Rook's time to shine.
+        </p>
+      </section> */}
 
       {/* Countdown section py-20 mt-80 md:mt-96 */}
       {/* <section className="mt-60 md:mt-40 bg-presale bg-center bg-[length:60rem] md:bg-[length:120rem]">
@@ -329,7 +343,7 @@ export default function Home() {
       </section>
 
       {/* Desktop navigation menu widgets */}
-      <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0">
+      <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0 2xl:right-[80rem] 2xl:top-0">
         <Link href="#home">
           <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group hover:border-gradient items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
