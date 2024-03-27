@@ -16,7 +16,8 @@ export default function Countdown() {
   const [seconds, setSeconds] = useState(0);
   const [countdownFinished, setCountdownFinished] = useState(false);
 
-  const deadline = "March, 30, 2024";
+  const deadline = "30, March 2024";
+  // const deadline = "11:00 AM";
   let interval: any;
   // const intervalRef = useRef(null);
 
@@ -75,28 +76,28 @@ export default function Countdown() {
     )}
         <div className="text-xl md:text-4xl flex gap-2 justify-center mt-5">
           <div id="days" className=" flex flex-col mx-1 md:mx-2">
-            <p className="font-bold">{days}</p>
+            <p className="font-bold">{days < 10 ? `0${days}` : days}</p>
             <p className="text-[#9C9C9C] font-orbitron text-xs md:text-sm mt-4">
               Days
             </p>
           </div>
           <div>:</div>
           <div id="hours" className=" flex flex-col mx-1 md:mx-2">
-            <p className="font-bold">{hours}</p>
+            <p className="font-bold">{hours < 10 ? `0${hours}` : hours}</p>
             <p className="text-[#9C9C9C] font-orbitron text-xs md:text-sm mt-4">
               Hours
             </p>
           </div>
           <div>:</div>
           <div id="minutes" className=" flex flex-col mx-1 md:mx-2">
-            <p className="font-bold">{minutes}</p>
+            <p className="font-bold">{minutes < 10 ? `0${minutes}` : minutes}</p>
             <p className="text-[#9C9C9C] font-orbitron text-xs md:text-sm mt-4">
               Minutes
             </p>
           </div>
           <div>:</div>
           <div id="seconds" className=" flex flex-col mx-1 md:mx-2">
-            <p className="text-[#00D5E9] font-bold">{seconds}</p>
+            <p className="text-[#00D5E9] font-bold">{seconds < 10 ? `0${seconds}` : seconds}</p>
             <p className="text-[#9C9C9C] font-orbitron text-xs md:text-sm mt-4">
               Seconds
             </p>

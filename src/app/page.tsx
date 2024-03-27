@@ -135,9 +135,9 @@ export default function Home() {
       </section>
 
       {/* Countdown section */}
-      {/* <section>
+      <section>
         <Countdown />
-      </section> */}
+      </section>
 
       {/* About section */}
       <section
