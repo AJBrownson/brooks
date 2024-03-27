@@ -28,12 +28,10 @@ import Logo from "../../public/logo.png";
 import NavMenu from "@/components/NavMenu";
 import Airdrop from "../../public/airdrop.png";
 import Countdown from "@/components/Countdown";
-import Cancel from "../../public/cancel-01.png"
-import Memes from "../../public/memes.png"
-import Stages from "../../public/stages.png"
-import StagesWeb from "../../public/stages-web.png"
-
-
+import Cancel from "../../public/cancel-01.png";
+import Memes from "../../public/memes.png";
+import Stages from "../../public/stages.png";
+import StagesWeb from "../../public/stages-web.png";
 
 const strokeStyle = {
   textShadow:
@@ -45,12 +43,9 @@ export default function Home() {
   const openDialog = () => setIsDialogVisible(true);
   const closeDialog = () => setIsDialogVisible(false);
 
-
-
   return (
     <main className="font-space relative 2xl:max-w-7xl">
-
-            {/* Mobile menu navigation
+      {/* Mobile menu navigation
             <section className="fixed lg:hidden">
         <NavMenu />
       </section> */}
@@ -67,12 +62,13 @@ export default function Home() {
         className="w-full object-cover lg:hidden"
       />
 
-      {/* Mobile menu navigation */}
-      <section className="absolute top-5 right-11 lg:hidden">
+      {/* Mobile menu navigation  */}
+      <div className="p-8 bg-blur fixed right-0 top-0 lg:hidden"></div>
+      <section className="absolute top-1 right-8 lg:hidden p-4">
         <NavMenu />
       </section>
 
-            {/* Gradient section */}
+      {/* Gradient section */}
       <section>
         <Image
           src={Gradient}
@@ -202,7 +198,9 @@ export default function Home() {
             <h1 className="font-orbitron font-bold text-sm lg:text-4xl leading-snug mb-3">
               Building Rooks First Gaming System
             </h1>
-            <p className="text-sm lg:text-base mb-4">Join us to be part of the movement.</p>
+            <p className="text-sm lg:text-base mb-4">
+              Join us to be part of the movement.
+            </p>
             <div>
               <button className="text-xs lg:text-base bg-black text-white px-3 lg:px-7 py-3">
                 In Development
@@ -254,18 +252,22 @@ export default function Home() {
 
       {/* Roadmap section */}
       <section className="mb-24" id="roadmap">
-      <h1 className="text-center text-[28px] lg:text-5xl font-orbitron font-semibold">
+        <h1 className="text-center text-[28px] lg:text-5xl font-orbitron font-semibold">
           Roadmap
         </h1>
         <div className="md:pl-16 mt-20 flex flex-col justify-between items-center md:items-baseline md:gap-10 md:flex-row">
           <Image src={Memes} alt="" className="w-48 lg:w-60" />
-          <Image src={StagesWeb} alt="" className="hidden lg:block w-[62.8rem]" />
+          <Image
+            src={StagesWeb}
+            alt=""
+            className="hidden lg:block w-[62.8rem]"
+          />
           <Image src={Stages} alt="" className="mt-8 lg:hidden" />
         </div>
       </section>
 
-            {/* Roadmap section */}
-            {/* <section className="mb-24" id="roadmap">
+      {/* Roadmap section */}
+      {/* <section className="mb-24" id="roadmap">
       <h1 className="text-center text-[28px] lg:text-5xl font-orbitron font-semibold">
           Roadmap
         </h1>
@@ -283,7 +285,7 @@ export default function Home() {
           Contact Rooks
         </h1>
         <div className="mt-5 mb-5 flex justify-center">
-          <Image src={Logo} alt="" className="w-20 h-20 "/>
+          <Image src={Logo} alt="" className="w-20 h-20 " />
         </div>
         <div className="flex justify-center gap-5 mb-6 lg:mb-14">
           <Link href="#">
@@ -320,12 +322,14 @@ export default function Home() {
         <Image src={VectorDown} alt="" className="mt-5 lg:mt-16 lg:mb-3" />
 
         <div className="font-orbitron font-medium text-[10px] lg:text-md">
-          <p className="text-[#999999] mt-4">2024 Rooks. All rights reserved!</p>
+          <p className="text-[#999999] mt-4">
+            2024 Rooks. All rights reserved!
+          </p>
         </div>
       </section>
 
       {/* Desktop navigation menu widgets */}
-      <section className="z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0">
+      <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0">
         <Link href="#home">
           <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group hover:border-gradient items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
@@ -360,68 +364,69 @@ export default function Home() {
           </div>
         </Link>
         <Link href="#roadmap">
-        <div
-          className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center"
-        >
-          <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
-            Roadmap
-          </span>
-
-          <span className="transition-opacity opacity-0 group-hover:opacity-100">
-            Roadmap
-          </span>
-        </div>
-        </Link>
-          <div onClick={openDialog} className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
+          <div className="font-medium p-[10px] pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
-              Mint Rooks <Image src={LockBlack} alt="" className="ml-2" />
+              Roadmap
             </span>
 
             <span className="transition-opacity opacity-0 group-hover:opacity-100">
-              Coming Soon
+              Roadmap
             </span>
           </div>
+        </Link>
+        <div
+          onClick={openDialog}
+          className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group items-center"
+        >
+          <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
+            Mint Rooks <Image src={LockBlack} alt="" className="ml-2" />
+          </span>
+
+          <span className="transition-opacity opacity-0 group-hover:opacity-100">
+            Coming Soon
+          </span>
+        </div>
 
         <div className="flex justify-between gap-3">
           <Link href="discord.com">
-            <div className="relative group w-12 h-12 group">
-              <Image
-                src={DiscordLight}
-                alt=""
-                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
-              />
+            <div className="bg-white hover:bg-black border border-black relative group p-5 group">
               <Image
                 src={DiscordDark}
                 alt=""
-                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+              />
+              <Image
+                src={Discord}
+                alt=""
+                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
             </div>
           </Link>
           <Link href="telegram.com">
-            <div className="relative group w-12 h-12 group">
-              <Image
-                src={TelegramLight}
-                alt=""
-                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
-              />
+            <div className="bg-white hover:bg-black border border-black relative group p-5 group">
               <Image
                 src={TelegramDark}
                 alt=""
-                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+              />
+              <Image
+                src={Telegram}
+                alt=""
+                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
             </div>
           </Link>
           <Link href="x.com">
-            <div className="relative group w-12 h-12 group">
-              <Image
-                src={XLight}
-                alt=""
-                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
-              />
+            <div className="bg-white hover:bg-black border border-black relative group p-5 group">
               <Image
                 src={XDark}
                 alt=""
-                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+              />
+              <Image
+                src={X}
+                alt=""
+                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
             </div>
           </Link>
@@ -459,7 +464,7 @@ export default function Home() {
           </div>
 
           {/* px-8 */}
-          <div className="p-6 pb-1 flex flex-col items-center justify-center w-full"> 
+          <div className="p-6 pb-1 flex flex-col items-center justify-center w-full">
             <Image src={Airdrop} alt="" className="w-48 lg:w-52" />
             <button
               onClick={openDialog}

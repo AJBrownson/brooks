@@ -12,6 +12,8 @@ const config: Config = {
         "big": "url('/gradient-bg.svg')",
         "small": "url('/grad.svg')",
         "presale": "url('/presale-bg.svg')",
+        "blur": "url('/blur.svg')",
+        "navBlur": "url('/nav-blur.png')",
       },
       gradientColorStops: theme => ({
         'custom-gradient': {
