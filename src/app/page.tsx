@@ -120,7 +120,7 @@ export default function Home() {
           </button>
 
           {/* <button
-            // onClick={openDialog}
+            onClick={openDialog}
             className="mt-4 lg:mt-8 px-20 lg:px-24 py-2 lg:py-3 border border-[#3C3C3C] text-white hover:border-white relative group hover:border-gradient inline-flex items-center"
           >
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
@@ -134,17 +134,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Countdown section */}
-      {/* <section className="mt-80 md:mt-96">
+      {/* Countdown section py-20 mt-80 md:mt-96 */}
+      {/* <section className="mt-60 md:mt-40 bg-presale bg-center bg-[length:60rem] md:bg-[length:120rem]">
         <Countdown />
       </section> */}
 
-      {/* About section (countdown: mt-28 md:mt-80) */}
+      {/* About section (countdown ? mt-10 md:mt-0, mt-28 md:mt-80) : normal (mt-60 lg:mt-96 ) */}
       <section
         className="mt-60 lg:mt-96 px-2 lg:px-20 lg:pb-36 gap-10"
         id="about"
       >
-        <Image src={VectorUp} alt="" className="mb-4" />
+        <Image src={VectorUp} alt="" className="mb-4 md:mb-16" />
         <div className="flex flex-col lg:flex-row items-center">
           <div className="">
             <Image src={About} alt="" className="" />
@@ -170,7 +170,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Image src={VectorDown} alt="" className="mt-4" />
+        <Image src={VectorDown} alt="" className="mt-4 md:mt-16" />
       </section>
 
       {/* Story section */}

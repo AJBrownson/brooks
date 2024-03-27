@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import LockWhite from "../../public/lock-white.svg";
 import BG from "../../public/presale-bg.svg";
@@ -16,9 +16,11 @@ export default function Countdown() {
   const [seconds, setSeconds] = useState(0);
   const [countdownFinished, setCountdownFinished] = useState(false);
 
-  const deadline = "2024-03-27T15:30";
+  const deadline = "2024-03-27T18:12";
+  // const deadline = "March, 30, 2024";
+  // const initialDeadline = "2024-03-27T17:58";
+  // const storedDeadlineKey = "deadline";
   let interval: any;
-  // const intervalRef = useRef(null);
 
 
   useEffect(() => {
@@ -62,10 +64,15 @@ export default function Countdown() {
     return () => clearInterval(interval);
   }, []);
 
+  // const resetTimer = () => {
+  //   localStorage.setItem(storedDeadlineKey, Date.parse(initialDeadline).toString());
+  //   setCountdownFinished(false);
+  // };
+
 
   return (
     <>
-      <section className="font-orbitron text-center text-[#EDEDED] bg-presale">
+      <section className="pt-20 md:pt-72 pb-16 md:pb-40 font-orbitron text-center text-[#EDEDED]">
         {countdownFinished ? (
           <h1
             className="text-lg md:text-2xl tracking-widest font-medium"
