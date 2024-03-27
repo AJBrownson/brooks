@@ -299,28 +299,28 @@ export default function Home() {
           Contact Rooks
         </h1>
         <div className="mt-5 mb-5 flex justify-center">
-          <Image src={Logo} alt="" className="w-20 h-20 " />
+          <Image src={Logo} alt="" className="w-20 h-20 xl:h-28 xl:w-28" />
         </div>
         <div className="flex justify-center gap-5 mb-6 lg:mb-14">
           <Link href="#">
             <Image
               src={Discord}
               alt=""
-              className="p-3 w-10 h-10 border border-[#3C3C3C] group hover:border-gradient"
+              className="p-3 w-10 h-10 xl:w-14 xl:h-14 xl:p-4 border border-[#3C3C3C] group hover:border-gradient"
             />
           </Link>
           <Link href="#">
             <Image
               src={Telegram}
               alt=""
-              className="p-3 w-10 h-10 border border-[#3C3C3C] group hover:border-gradient"
+              className="p-3 w-10 h-10 xl:w-14 xl:h-14 xl:p-4 border border-[#3C3C3C] group hover:border-gradient"
             />
           </Link>
           <Link href="#">
             <Image
               src={X}
               alt=""
-              className="p-3 w-10 h-10 border border-[#3C3C3C] group hover:border-gradient"
+              className="p-3 w-10 h-10 xl:w-14 xl:h-14 xl:p-4 border border-[#3C3C3C] group hover:border-gradient"
             />
           </Link>
         </div>
