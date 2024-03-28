@@ -277,18 +277,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Roadmap section */}
-      {/* <section className="mb-24" id="roadmap">
-      <h1 className="text-center text-[28px] lg:text-5xl font-orbitron font-semibold">
-          Roadmap
-        </h1>
-        <div className="lg:pl-16 mt-20 flex flex-col justify-between items-center lg:items-baseline lg:gap-10 lg:flex-row">
-          <Image src={Memes} alt="" className="w-48 lg:w-60" />
-          <Image src={StagesWeb} alt="" className="hidden lg:block w-[62.8rem]" />
-          <Image src={Stages} alt="" className="mt-8 lg:hidden" />
-        </div>
-      </section> */}
-
       {/* Footer section */}
       <section className="text-center text-[#EDEDED] pb-5 px-[8px] lg:px-64">
         <Image src={VectorUp} alt="" className="mb-4 lg:mb-16" />
