@@ -287,7 +287,7 @@ export default function Home() {
           <Image src={Logo} alt="" className="w-20 h-20 xl:h-28 xl:w-28" />
         </div>
         <div className="flex justify-center gap-5 mb-6 lg:mb-14">
-          <Link href="#">
+          <Link href="https://discord.gg/qqXP5kQw">
             <Image
               src={Discord}
               alt=""
@@ -301,7 +301,7 @@ export default function Home() {
               className="p-3 w-10 h-10 xl:w-14 xl:h-14 xl:p-4 border border-[#3C3C3C] group hover:border-gradient"
             />
           </Link>
-          <Link href="#">
+          <Link href="https://x.com/memerooks">
             <Image
               src={X}
               alt=""
@@ -387,7 +387,7 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between gap-3">
-          <Link href="discord.com">
+          <Link href="https://discord.gg/qqXP5kQw" rel="noopener noreferrer" target="_blank">
             <div className="bg-white hover:bg-black border border-black relative group p-5 group">
               <Image
                 src={DiscordDark}
@@ -415,7 +415,7 @@ export default function Home() {
               />
             </div>
           </Link>
-          <Link href="x.com">
+          <Link href="https://x.com/memerooks" rel="noopener noreferrer" target="_blank">
             <div className="bg-white hover:bg-black border border-black relative group p-5 group">
               <Image
                 src={XDark}

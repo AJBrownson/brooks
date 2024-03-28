@@ -125,7 +125,7 @@ export default function NavMenu() {
           </div>
 
           <div className="flex justify-between gap-3">
-            <Link href="discord.com">
+            <Link href="https://discord.gg/qqXP5kQw" rel="noopener noreferrer" target="_blank">
               <div className="bg-white hover:bg-black border border-black relative group p-5 group">
                 <Image
                   src={DiscordDark}
@@ -153,7 +153,7 @@ export default function NavMenu() {
                 />
               </div>
             </Link>
-            <Link href="x.com">
+            <Link href="https://x.com/memerooks" rel="noopener noreferrer" target="_blank">
               <div className="bg-white hover:bg-black border border-black relative group p-5 group">
                 <Image
                   src={XDark}
