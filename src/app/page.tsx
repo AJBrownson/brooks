@@ -287,7 +287,7 @@ export default function Home() {
           <Image src={Logo} alt="" className="w-20 h-20 xl:h-28 xl:w-28" />
         </div>
         <div className="flex justify-center gap-5 mb-6 lg:mb-14">
-          <Link href="https://discord.gg/qqXP5kQw">
+          <Link href="https://discord.gg/qqXP5kQw" rel="noopener noreferrer" target="_blank">
             <Image
               src={Discord}
               alt=""
@@ -301,7 +301,7 @@ export default function Home() {
               className="p-3 w-10 h-10 xl:w-14 xl:h-14 xl:p-4 border border-[#3C3C3C] group hover:border-gradient"
             />
           </Link>
-          <Link href="https://x.com/memerooks">
+          <Link href="https://x.com/memerooks" rel="noopener noreferrer" target="_blank">
             <Image
               src={X}
               alt=""
