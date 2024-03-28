@@ -16,6 +16,7 @@ import LockBlack from "../../public/lock-black.svg";
 import Cancel from "../../public/cancel-01.png";
 import Airdrop from "../../public/airdrop.png";
 
+
 export default function NavMenu() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const mobileMenu = useRef(null);
