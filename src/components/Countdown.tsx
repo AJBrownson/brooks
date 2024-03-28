@@ -16,7 +16,7 @@ export default function Countdown() {
   const [seconds, setSeconds] = useState(0);
   const [countdownFinished, setCountdownFinished] = useState(false);
 
-  const deadline = "2024-03-27T18:12";
+  const deadline = "2024-03-27T18:12Z";
   // const deadline = "March, 30, 2024";
   // const initialDeadline = "2024-03-27T17:58";
   // const storedDeadlineKey = "deadline";
