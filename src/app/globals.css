@@ -38,6 +38,11 @@ body {
   border-image-slice: 1;
 }
 
+.group:hover {
+  border-style: solid;
+  border-color: transparent;
+}
+
 .bg-custom-gradient {
   background: linear-gradient(101.63deg, #1000D9 35.64%, #00CCFF 50%, #00CCFF 61.03%, #0D0D0D 87.96%);
 }

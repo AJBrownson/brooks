@@ -91,7 +91,7 @@ export default function Home() {
         <div className="mt-2 flex lg:items-center justify-center gap-3">
           <button
             // onClick={openDialog}
-            className="mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 border border-[#3C3C3C] text-white hover:border-white relative group hover:border-gradient inline-flex items-center"
+            className="mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 border border-[#3C3C3C] text-white relative group hover:border-gradient inline-flex items-center"
           >
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
               Mint Rooks <Image src={LockWhite} alt="" className="ml-2" />
