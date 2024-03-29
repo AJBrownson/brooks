@@ -23,13 +23,13 @@ import VectorDown from "../../public/vector-down.png";
 import Gaming from "../../public/gaming.png";
 import Logo from "../../public/logo.png";
 import NavMenu from "@/components/NavMenu";
-import Airdrop from "../../public/airdrop.png";
 import Countdown from "@/components/Countdown";
 import Cancel from "../../public/cancel-01.png";
 import Memes from "../../public/memes.png";
 import Stages from "../../public/stages.png";
 import StagesWeb from "../../public/stages-web.png";
 import Drop from "../../public/drop.png"
+
 
 const strokeStyle = {
   textShadow:
@@ -331,7 +331,7 @@ export default function Home() {
       </section>
 
       {/* Desktop navigation menu widgets */}
-      <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0 2xl:right-[80rem] 2xl:top-0">
+      <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0 2xl:right-[80rem] lg:top-0">
         <Link href="#home">
           <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group hover:border-gradient items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
@@ -465,9 +465,9 @@ export default function Home() {
             </p>
           </div>
 
-          {/* px-8 */}
+          {/* px-8 w-48 lg:w-52 */}
           <div className="p-6 pb-1 flex flex-col items-center justify-center w-full">
-            <Image src={Drop} alt="" className="w-48 lg:w-52" />
+            <Image src={Drop} alt="" className="w-48 md:60" />
             <button
               onClick={openDialog}
               className="mt-4 lg:mt-8 px-24 lg:px-24 py-5 lg:py-6 text-center border border-transparent hover:border-white relative group hover:border-gradient inline-flex items-center"
