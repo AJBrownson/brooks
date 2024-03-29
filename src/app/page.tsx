@@ -29,11 +29,14 @@ import Cancel from "../../public/cancel-01.png";
 import Memes from "../../public/memes.png";
 import Stages from "../../public/stages.png";
 import StagesWeb from "../../public/stages-web.png";
+import Drop from "../../public/drop.png"
 
 const strokeStyle = {
   textShadow:
     "-1px -1px 0 #F5BF2D, 1px -1px 0 #F5BF2D, -1px 1px 0 #F5BF2D, 1px 1px 0 #F5BF2D",
 };
+
+
 
 export default function Home() {
   const [isDialogVisible, setIsDialogVisible] = useState(false);
@@ -90,7 +93,7 @@ export default function Home() {
 
         <div className="mt-2 flex lg:items-center justify-center gap-3">
           <button
-            // onClick={openDialog}
+            onClick={openDialog}
             className="mt-4 lg:mt-8 px-8 lg:px-12 py-2 lg:py-3 border border-[#3C3C3C] text-white relative group hover:border-gradient inline-flex items-center"
           >
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute inset-0 flex items-center justify-center">
@@ -287,7 +290,7 @@ export default function Home() {
           <Image src={Logo} alt="" className="w-20 h-20 xl:h-28 xl:w-28" />
         </div>
         <div className="flex justify-center gap-5 mb-6 lg:mb-14">
-          <Link href="https://discord.gg/qqXP5kQw" rel="noopener noreferrer" target="_blank">
+          <Link href="https://discord.gg/3P6TmW5urD" rel="noopener noreferrer" target="_blank">
             <Image
               src={Discord}
               alt=""
@@ -387,7 +390,7 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between gap-3">
-          <Link href="https://discord.gg/qqXP5kQw" rel="noopener noreferrer" target="_blank">
+          <Link href="https://discord.gg/3P6TmW5urD" rel="noopener noreferrer" target="_blank">
             <div className="bg-white hover:bg-black border border-black relative group p-5 group">
               <Image
                 src={DiscordDark}
@@ -464,7 +467,7 @@ export default function Home() {
 
           {/* px-8 */}
           <div className="p-6 pb-1 flex flex-col items-center justify-center w-full">
-            <Image src={Airdrop} alt="" className="w-48 lg:w-52" />
+            <Image src={Drop} alt="" className="w-48 lg:w-52" />
             <button
               onClick={openDialog}
               className="mt-4 lg:mt-8 px-24 lg:px-24 py-5 lg:py-6 text-center border border-transparent hover:border-white relative group hover:border-gradient inline-flex items-center"
