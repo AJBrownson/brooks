@@ -11,7 +11,7 @@ import LockWhite from "../../public/lock-white.svg";
 import LockBlack from "../../public/lock-black.svg";
 import Circle from "../../public/circle.png";
 import Gradient from "../../public/gradient-bg.svg";
-import { InfiniteSlider } from "@/components/Carousel";
+import { Carousel } from "@/components/Carousel";
 import Telegram from "../../public/Telegram.png";
 import TelegramDark from "../../public/TelegramDark.png";
 import X from "../../public/X.png";
@@ -202,7 +202,7 @@ export default function Home() {
 
       {/* Carousel section */}
       <section>
-        <InfiniteSlider />
+        <Carousel />
       </section>
 
       {/* Gaming section gap-10 w-50% w-28 h-28*/}

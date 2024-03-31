@@ -9,7 +9,7 @@ import NFT5 from "../../public/nft5.png";
 
 
 
-export const InfiniteSlider = () => {
+export const Carousel = () => {
   return (
     <>
       <div className="w-full inline-flex flex-nowrap overflow-hidden lg:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
