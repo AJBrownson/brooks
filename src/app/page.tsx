@@ -330,8 +330,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Desktop navigation menu widgets */}
-      <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0 2xl:right-[80rem] lg:top-0">
+      {/* Desktop navigation menu widgets  xl:h-80 xl:pt-16 xl:top-0 */}
+      <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0 2xl:right-[80rem] xl:h-96 xl:pt-16 xl:top-0">
         <Link href="#home">
           <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group hover:border-gradient items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
