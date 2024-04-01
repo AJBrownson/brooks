@@ -281,14 +281,14 @@ export default function Home() {
           <Image src={Stages} alt="" className="mt-8 lg:hidden" />
         </div> */}
         <div className="mt-8 md:mt-14 flex items-center justify-center">
-          <Image src={Roadmap} alt="" className="hidden md:block md:w-[50rem] md:h-auto md:object-contain" />
+          <Image src={Roadmap} alt="" className="hidden md:block md:w-[60rem] md:h-auto md:object-contain" />
           <Image src={RoadmapMobile} alt="" className="md:hidden" />
         </div>
       </section>
 
       {/* Footer section */}
       <section className="text-center text-[#EDEDED] pb-5 px-[8px] lg:px-64">
-        <Image src={VectorUp} alt="" className="mb-4 lg:mb-16" />
+        <Image src={VectorUp} alt="" className="pt-5 mb-4 lg:mb-16" />
         <h1 className="text-[28px] lg:text-5xl font-orbitron font-semibold">
           Contact Rooks
         </h1>
@@ -337,7 +337,7 @@ export default function Home() {
       </section>
 
       {/* Desktop navigation menu widgets  xl:h-80 xl:pt-16 xl:top-0 */}
-      <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0 2xl:right-[80rem] xl:h-96 xl:pt-16 xl:top-0">
+      <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0 2xl:right-[80rem] xl:h-96 xl:pt-16 lg:top-0">
         <Link href="#home">
           <div className="font-medium p-3 pl-5 pr-5 bg-white text-black text-left border border-black hover:text-white hover:bg-black relative group hover:border-gradient items-center">
             <span className="transition-opacity opacity-100 group-hover:opacity-0 absolute flex items-center justify-center">
@@ -457,7 +457,7 @@ export default function Home() {
               className="font-orbitron text-xl font-thin hover:font-semibold absolute top-6 lg:top-6 right-2 lg:right-4"
               onClick={closeDialog}
             >
-              <Image src={Cancel} alt="" />
+              <Image src={Cancel} alt="" className="hover:border border-gray-500 rounded-md" />
             </button>
           </div>
 
