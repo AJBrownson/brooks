@@ -28,6 +28,8 @@ import Cancel from "../../public/cancel-01.png";
 import Memes from "../../public/memes.png";
 import Stages from "../../public/stages.png";
 import StagesWeb from "../../public/stages-web.png";
+import Roadmap from "../../public/roadmap-web.png"
+import RoadmapMobile from "../../public/roadmapp.png"
 import Drop from "../../public/drop.png"
 
 
@@ -265,11 +267,11 @@ export default function Home() {
       </section>
 
       {/* Roadmap section */}
-      <section className="mb-24" id="roadmap">
+      <section className="px-3 md:px-5" id="roadmap">
         <h1 className="text-center text-[28px] lg:text-5xl font-orbitron font-semibold">
           Roadmap
         </h1>
-        <div className="md:pl-16 mt-20 flex flex-col justify-between items-center md:items-baseline md:gap-10 md:flex-row">
+        {/* <div className="md:pl-16 mt-20 flex flex-col justify-between items-center md:items-baseline md:gap-10 md:flex-row">
           <Image src={Memes} alt="" className="w-48 lg:w-60" />
           <Image
             src={StagesWeb}
@@ -277,6 +279,10 @@ export default function Home() {
             className="hidden lg:block w-[62.8rem]"
           />
           <Image src={Stages} alt="" className="mt-8 lg:hidden" />
+        </div> */}
+        <div className="mt-8 md:mt-14 flex items-center justify-center">
+          <Image src={Roadmap} alt="" className="hidden md:block md:w-[50rem] md:h-auto md:object-contain" />
+          <Image src={RoadmapMobile} alt="" className="md:hidden" />
         </div>
       </section>
 
@@ -395,12 +401,12 @@ export default function Home() {
               <Image
                 src={DiscordDark}
                 alt=""
-                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+                className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
               />
               <Image
                 src={Discord}
                 alt=""
-                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
             </div>
           </Link>
@@ -409,12 +415,12 @@ export default function Home() {
               <Image
                 src={TelegramDark}
                 alt=""
-                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+                className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
               />
               <Image
                 src={Telegram}
                 alt=""
-                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
             </div>
           </Link>
@@ -423,12 +429,12 @@ export default function Home() {
               <Image
                 src={XDark}
                 alt=""
-                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+                className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
               />
               <Image
                 src={X}
                 alt=""
-                className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
             </div>
           </Link>

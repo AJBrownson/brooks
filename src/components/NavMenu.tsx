@@ -144,12 +144,12 @@ export default function NavMenu() {
                 <Image
                   src={TelegramDark}
                   alt=""
-                  className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+                  className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
                 />
                 <Image
                   src={Telegram}
                   alt=""
-                  className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                  className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                 />
               </div>
             </Link>
@@ -158,12 +158,12 @@ export default function NavMenu() {
                 <Image
                   src={XDark}
                   alt=""
-                  className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+                  className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
                 />
                 <Image
                   src={X}
                   alt=""
-                  className="absolute inset-0 object-contain w-20 p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                  className="absolute inset-0 object-contain w-20 h-auto p-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                 />
               </div>
             </Link>
