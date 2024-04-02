@@ -49,6 +49,8 @@ export default function Countdown() {
       setSeconds(secondsRemaining);
     };
 
+    console.log(getTime)
+
     if (!storedDeadline) {
       localStorage.setItem("deadline", Date.parse(deadline).toString());
     } else {

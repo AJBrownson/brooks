@@ -59,3 +59,60 @@ body {
     text-wrap: balance;
   }
 } */
+
+
+@media screen and (min-width: 320px) {
+  .gradientSection img {
+    position: absolute;
+    top: 8rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .gradientSection img {
+    position: absolute;
+    top: clamp(9rem, 9.5rem, 10rem);
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .gradientSection img {
+    position: absolute;
+    top: 10rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gradientSection img {
+    position: absolute;
+    top: 20rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gradientSection img {
+    position: absolute;
+    top: 7rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gradientSection img {
+    position: absolute;
+    top: 12rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .gradientSection img {
+    position: absolute;
+    top: 13rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .gradientSection img {
+    position: absolute;
+    top: 10rem;
+  }
+}

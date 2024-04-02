@@ -25,11 +25,8 @@ import Logo from "../../public/logo.png";
 import NavMenu from "@/components/NavMenu";
 import Countdown from "@/components/Countdown";
 import Cancel from "../../public/cancel-01.png";
-import Memes from "../../public/memes.png";
-import Stages from "../../public/stages.png";
-import StagesWeb from "../../public/stages-web.png";
-import Roadmap from "../../public/roadmap-web.png"
-import RoadmapMobile from "../../public/roadmapp.png"
+import Roadmap from "../../public/roadmap-webb.png"
+import RoadmapMobile from "../../public/roadmap.png"
 import Drop from "../../public/drop.png"
 
 
@@ -55,7 +52,7 @@ export default function Home() {
       <Image
         src={Hero}
         alt=""
-        className="hidden lg:block w-full object-cover"
+        className="hidden lg:block w-full object-contain"
         id="home"
       />
       <Image
@@ -71,11 +68,19 @@ export default function Home() {
       </section>
 
       {/* Gradient section lg:h-[21.5rem] absolute top-[9.5rem] md:top-72 lg:top-[12rem] */}
-      <section>
+      {/* <section>
         <Image
           src={Gradient}
           alt="A gradient picture"
           className="lg:h-[21.5rem] absolute top-32 md:top-72 lg:top-20 xl:top-[12rem] 2xl:top-32"
+        />
+      </section> */}
+
+      <section className="gradientSection">
+      <Image
+          src={Gradient}
+          alt="A gradient picture"
+          // className="lg:h-[21.5rem] absolute top-32 md:top-72 lg:top-20 xl:top-[12rem] 2xl:top-32"
         />
       </section>
 
@@ -117,7 +122,7 @@ export default function Home() {
             </span>
           </button>
 
-          {/* <button
+           {/* <button
             onClick={openDialog}
             className="mt-4 lg:mt-8 px-20 lg:px-24 py-2 lg:py-3 border border-[#3C3C3C] text-white hover:border-white relative group hover:border-gradient inline-flex items-center"
           >
@@ -128,23 +133,9 @@ export default function Home() {
             <span className="transition-opacity opacity-0 group-hover:opacity-100">
              Mint Rooks
             </span>
-          </button> */}
+          </button>  */}
         </div>
       </section>
-
-      {/* <section className="bg-heroSmall h-full pb-2 bg-cover bg-no-repeat">
-      <h1
-          className="mb-[-12px] text-center text-[72px] md:text-[120px] lg:text-[164px] font-orbitron font-extrabold"
-          style={strokeStyle}
-        >
-          <span className="text-[#00D5E9]">R</span>oo
-          <span className="text-[#00D5E9]">ks</span>
-        </h1>
-        <p className="text-sm lg:text-lg lg:px-72 font-orbitron">
-          The most shareable meme coin out there. While the dogs and frogs have
-          had their moment, now it's Rook's time to shine.
-        </p>
-      </section> */}
 
       {/* Countdown section py-20 mt-80 md:mt-96 */}
       {/* <section className="mt-60 md:mt-40 bg-presale bg-center bg-[length:60rem] md:bg-[length:120rem]">
@@ -324,7 +315,7 @@ export default function Home() {
         <p className="text-sm lg:text-lg">
           $ROOKS is a lighthearted meme coin created purely for entertainment.
           It's not designed for making money or any financial gain. There's no
-          formal team or roadmap behind it, just a fun token in the world of
+          formal team behind it, just a fun token in the world of
           memes.
         </p>
         <Image src={VectorDown} alt="" className="mt-5 lg:mt-16 lg:mb-3" />
