@@ -142,7 +142,7 @@ export default function Home() {
         <Countdown />
       </section> */}
 
-      {/* About section (countdown ? mt-10 md:mt-0, mt-28 md:mt-80) : normal (mt-60 lg:mt-96 ) */}
+      {/* About section (countdown ? "mt-10 md:mt-0", mt-28 md:mt-80) : normal (mt-60 lg:mt-96 ) */}
       <section
         className="mt-60 lg:mt-96 px-2 lg:px-20 lg:pb-36 gap-10"
         id="about"
