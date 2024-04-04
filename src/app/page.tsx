@@ -51,11 +51,13 @@ export default function Home() {
         alt=""
         className="hidden lg:block w-full object-contain"
         id="home"
+        priority={true}
       />
       <Image
         src={HeroMobile}
         alt=""
         className="w-full object-cover lg:hidden"
+        priority={true}
       />
       {/* Mobile menu navigation  */}
       <div className="p-8 bg-blur fixed right-0 top-0 lg:hidden"></div>
