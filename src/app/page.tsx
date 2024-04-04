@@ -62,6 +62,7 @@ export default function Home() {
       <section className="absolute top-1 right-8 lg:hidden p-4">
         <NavMenu />
       </section>
+
       {/* Gradient section lg:h-[21.5rem] absolute top-[9.5rem] md:top-72 lg:top-[12rem] */}
       {/* <section>
         <Image
@@ -77,6 +78,7 @@ export default function Home() {
           // className="lg:h-[21.5rem] absolute top-32 md:top-72 lg:top-20 xl:top-[12rem] 2xl:top-32"
         />
       </section>
+
       {/* Hero section top-[9.7rem] md:top-80 lg:top-56 : section=> top-32 md:top-80 lg:top-56 */}
       <section className="top-32 md:top-80 lg:top-40 xl:top-56 2xl:top-48 absolute z-10 text-center px-[6px] lg:px-0">
         <h1
@@ -129,10 +131,12 @@ export default function Home() {
           </button>  */}
         </div>
       </section>
+
       {/* Countdown section py-20 mt-80 md:mt-96 */}
       {/* <section className="mt-60 md:mt-40 bg-presale bg-center bg-[length:60rem] md:bg-[length:120rem]">
         <Countdown />
       </section> */}
+
       {/* About section (countdown ? "mt-10 md:mt-0", mt-28 md:mt-80) : normal (mt-60 lg:mt-96 ) */}
       <section
         className="mt-60 lg:mt-96 px-2 lg:px-20 lg:pb-36 gap-10"
@@ -166,6 +170,7 @@ export default function Home() {
         </div>
         <Image src={VectorDown} alt="" className="mt-4 md:mt-16" />
       </section>
+
       {/* Story section */}
       <section className="mt-16 lg:mt-4 pb-4 py-10 px-[8px] lg:px-60 bg-story-gradient">
         <h1 className="text-[#00D5E9] font-orbitron text-center font-extrabold text-lg lg:text-2xl mb-5">
@@ -182,10 +187,12 @@ export default function Home() {
           that in the volatile realm of memes, quiet strength can reign supreme.
         </p>
       </section>
+
       {/* Carousel section */}
       <section>
         <Carousel />
       </section>
+
       {/* Gaming section gap-10 w-50% w-28 h-28*/}
       <section className="mt-20 lg:mt-36 px-2 lg:px-20">
         <div className="py-6 px-4 lg:px-8 flex justify-between gap-2 lg:gap-40 items-center bg-custom-gradient">
@@ -205,9 +212,8 @@ export default function Home() {
           <Image src={Gaming} alt="" className="w-40 h-40 lg:w-80 lg:h-80" />
         </div>
       </section>
+
       {/* Tokenomics section */}
-      {/* lg:justify-between justify-center rounded-sm  xl:max-w-lg lg:text-left */}{" "}
-      {/* className="hidden lg:flex items-center justify-center mt-8 lg:mt-0 lg:h-96" */}
       <section className="mt-20 px-2 lg:px-20 mb-20" id="tokenomics">
         <div className="">
           <div className="flex flex-col justify-center lg:p-4 mb-8 md:mb-16 text-center">
@@ -303,6 +309,7 @@ export default function Home() {
         </div>
         <Image src={VectorDown} alt="" className="mt-5 lg:mt-10" />
       </section>
+
       {/* Roadmap section */}
       <section className="px-2 md:px-5" id="roadmap">
         <h1 className="text-center text-[28px] lg:text-5xl font-orbitron font-semibold">
@@ -326,6 +333,7 @@ export default function Home() {
           <Image src={RoadmapMobile} alt="" className="md:hidden" />
         </div>
       </section>
+
       {/* Footer section */}
       <section className="text-center text-[#EDEDED] pb-5 px-[8px] lg:px-64">
         <Image src={VectorUp} alt="" className="pt-5 mb-4 lg:mb-16" />
@@ -370,9 +378,9 @@ export default function Home() {
           $Rooks coin is a tribute to the meme we all adore.
         </p>
         <p className="text-sm lg:text-lg">
-          $ROOKS is a lighthearted meme coin created purely for entertainment.
-          It's not designed for making money or any financial gain. There's no
-          formal team behind it, just a fun token in the world of memes.
+          $ROOKS is a playful meme coin designed simply to join in on the fun of
+          the memecoin world. Its main goal is to entertain while also growing
+          as a token
         </p>
         <Image src={VectorDown} alt="" className="mt-5 lg:mt-16 lg:mb-3" />
 
@@ -382,6 +390,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+
       {/* Desktop navigation menu widgets  xl:h-80 xl:pt-16 xl:top-0 */}
       <section className="bg-blur pl-4 pt-20 pb-3 z-50 hidden fixed lg:flex flex-col gap-1 bottom-[17rem] right-0 2xl:right-[80rem] xl:h-96 xl:pt-16 lg:top-0">
         <Link href="#home">
@@ -494,6 +503,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
       {/* Dialog modal section */}
       <ModalDialog
         isDialogVisible={isDialogVisible}
