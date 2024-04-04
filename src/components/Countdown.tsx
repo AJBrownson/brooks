@@ -14,7 +14,7 @@ export default function Countdown() {
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
-  // const [countdownFinished, setCountdownFinished] = useState(falsse);
+  // const [countdownFinished, setCountdownFinished] = useState(false);
   const [countdownFinished, setCountdownFinished] = useState(true);
 
   const deadline = "2024-04-02T19:28Z";
@@ -30,10 +30,10 @@ export default function Countdown() {
     const getTime = () => {
       const now = Date.now();
       const deadlineTime = new Date(deadline).getTime();
-      const adjustedTime = deadlineTime - (timeZoneOffset * 60000)
+      const adjustedTime = deadlineTime - timeZoneOffset * 60000;
 
       // if (now >= deadlineTime) {
-        if (now >= adjustedTime) {
+      if (now >= adjustedTime) {
         // setCountdownFinished(true);
         setCountdownFinished(false);
         clearInterval(interval);
