@@ -25,8 +25,8 @@ import Logo from "../../public/logo.png";
 import NavMenu from "@/components/NavMenu";
 import Countdown from "@/components/Countdown";
 import Cancel from "../../public/cancel-01.png";
-import Roadmap from "../../public/roadmap-webb.png";
-import RoadmapMobile from "../../public/roadmap.png";
+import Roadmap from "../../public/roadmap-web.png";
+import RoadmapMobile from "../../public/roadmap-mobile.png";
 import Drop from "../../public/drop.png";
 
 const strokeStyle = {
